@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+<<<<<<< HEAD
+  status = 200 
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block" 
+=======
+  status = 200 
+>>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
