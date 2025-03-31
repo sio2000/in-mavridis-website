@@ -35,6 +35,22 @@ import summerResidenceComplex5 from '../assets/images/Summer_residence_complex5.
 import summerResidenceComplex6 from '../assets/images/Summer_residence_complex6.jpg';
 import holidayGroundFloorResidences from '../assets/images/holiday_ground_floor_residences.jpg';
 
+// Import new images
+import houseParaliaArogi from '../assets/images/house_in_Paralia_Arogi.jpg';
+import houseParaliaArogi2 from '../assets/images/house_in_Paralia_Arogi2.jpg';
+import houseParaliaArogi3 from '../assets/images/house_in_Paralia_Arogi3.jpg';
+import SmallRentalApartments1 from '../assets/images/Small_Rental_apartments1.jpg';
+import SmallRentalApartments2 from '../assets/images/Small_Rental_apartments2.jpg';
+import SmallRentalApartments3 from '../assets/images/Small_Rental_apartments3.jpg';
+import SmallRentalApartments4 from '../assets/images/Small_Rental_apartments4.jpg';
+import SmallRentalApartments5 from '../assets/images/Small_Rental_apartments5.jpg';
+import SmallRentalApartments6 from '../assets/images/Small_Rental_apartments6.jpg';
+import MaroniaPlatanitis from '../assets/images/Maronia_Platanitis_beach.jpg';
+import MaroniaPlatanitis2 from '../assets/images/Maronia_Platanitis_beach2.jpg';
+import MaroniaPlatanitis3 from '../assets/images/Maronia_Platanitis_beach3.jpg';
+import MaroniaPlatanitis4 from '../assets/images/Maronia_Platanitis_beach4.jpg';
+import MaroniaPlatanitis5 from '../assets/images/Maronia_Platanitis_beach5.jpg';
+
 const CoastalZoneProjects = () => {
   const { language } = useLanguage();
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -139,6 +155,52 @@ const CoastalZoneProjects = () => {
         en: 'Three identical holiday homes in Profitis Ilias'
       },
       images: [holidayGroundFloorResidences]
+    },
+    {
+      title: {
+        el: 'Μονοκατοικία στην Παραλία Αρωγής',
+        en: 'House in Arogi Beach'
+      },
+      description: {
+        el: 'Αρχιτεκτονική μελέτη, Στατική μελέτη, ισόγειας μονοκατοικίας 50 τ.μ. με σοφίτα 25 τ.μ.',
+        en: 'Architectural study, Static study, ground floor house 50 sq.m. with 25 sq.m. loft'
+      },
+      images: [houseParaliaArogi, houseParaliaArogi2, houseParaliaArogi3]
+    },
+    {
+      title: {
+        el: 'Maronia Rental apartments Resort',
+        en: 'Maronia Rental Apartments Resort'
+      },
+      description: {
+        el: 'Συγκρότημα ενοικιαζόμενων διαμερισμάτων στη Μαρώνεια',
+        en: 'Rental apartments complex in Maronia'
+      },
+      images: [
+        SmallRentalApartments1,
+        SmallRentalApartments2,
+        SmallRentalApartments3,
+        SmallRentalApartments4,
+        SmallRentalApartments5,
+        SmallRentalApartments6
+      ]
+    },
+    {
+      title: {
+        el: 'Παραλία Πλατανίτη Μαρώνειας',
+        en: 'Platanitis Beach Maronia'
+      },
+      description: {
+        el: 'Συγκρότημα έξι θερινών κατοικιών',
+        en: 'Complex of six summer residences'
+      },
+      images: [
+        MaroniaPlatanitis,
+        MaroniaPlatanitis2,
+        MaroniaPlatanitis3,
+        MaroniaPlatanitis4,
+        MaroniaPlatanitis5
+      ]
     }
   ];
 
