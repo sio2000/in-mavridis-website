@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Ruler, PencilRuler, Building2, Compass, CheckCircle2, X, ArrowRight, Award, Building } from 'lucide-react';
-=======
-import { Ruler, PencilRuler, Building2, Compass, CheckCircle2, X, ArrowRight } from 'lucide-react';
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
 import { useTranslation } from '../hooks/useTranslation';
 import { useLanguage } from '../context/LanguageContext';
 import f1 from '../assets/images/f1.jpg';
@@ -43,7 +39,6 @@ import ak from '../assets/images/ak.jpg';
 import al from '../assets/images/al.jpg';
 import lop from '../assets/images/lop.png';
 import lop2 from '../assets/images/lop2.jpg';
-<<<<<<< HEAD
 import VelvetSkins2 from '../assets/images/VelvetSkins2.jpg';
 import VelvetSkins3 from '../assets/images/VelvetSkins3.jpg';
 import VelvetSkins4 from '../assets/images/VelvetSkins4.jpg';
@@ -192,9 +187,23 @@ import olderProjects1 from '../assets/images/Older_projects.jpg';
 import olderProjects2 from '../assets/images/Older_projects2.jpg';
 import olderProjects3 from '../assets/images/Older_projects3.jpg';
 import olderProjects4 from '../assets/images/Older_projects4.jpg';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
+import Renovation_of_a_detached_house_in_the_center from '../assets/images/Renovation_of_a_detached_house_in_the_center.jpg';
+import Renovation_of_a_detached_house_in_the_center2 from '../assets/images/Renovation_of_a_detached_house_in_the_center2.jpg';
+import Renovation_of_a_detached_house_in_the_center3 from '../assets/images/Renovation_of_a_detached_house_in_the_center3.jpg';
+import store_in_a_shopping_center from '../assets/images/store_in_a_shopping_center.jpg';
+import store_in_a_shopping_center2 from '../assets/images/store_in_a_shopping_center2.jpg';
+import store_in_a_shopping_center3 from '../assets/images/store_in_a_shopping_center3.jpg';
+import store_in_a_shopping_center4 from '../assets/images/store_in_a_shopping_center4.jpg';
+import store_in_a_shopping_center5 from '../assets/images/store_in_a_shopping_center5.jpg';
+import store_in_a_shopping_center6 from '../assets/images/store_in_a_shopping_center6.jpg';
+import store_in_a_shopping_center7 from '../assets/images/store_in_a_shopping_center7.jpg';
+import store_in_a_shopping_center8 from '../assets/images/store_in_a_shopping_center8.jpg';
+import store_in_a_shopping_center9 from '../assets/images/store_in_a_shopping_center9.jpg';
+import Renovation_of_Second_detached_house_in_the_center from '../assets/images/Renovation_of_Second_detached_house_in_the_center.jpg';
+import Renovation_of_Second_detached_house_in_the_center2 from '../assets/images/Renovation_of_Second_detached_house_in_the_center2.jpg';
+import Renovation_of_Second_detached_house_in_the_center3 from '../assets/images/Renovation_of_Second_detached_house_in_the_center3.jpg';
+import Renovation_of_Second_detached_house_in_the_center4 from '../assets/images/Renovation_of_Second_detached_house_in_the_center4.jpg';
+import Renovation_of_Second_detached_house_in_the_center5 from '../assets/images/Renovation_of_Second_detached_house_in_the_center5.jpg';
 
 interface ServiceItem {
   title: string;
@@ -344,6 +353,62 @@ const ArchitecturalOffice = () => {
     {
       id: 1,
       title: {
+        el: 'Aνάπλαση μονοκατοικίας στο κέντρο',
+        en: 'Renovation of a detached house in the center'
+      },
+      description: {
+        el: 'Ανάπλαση μονοκατοικίας στο κέντρο της πόλης',
+        en: 'Renovation of a detached house in the city center'
+      },
+      images: [
+        Renovation_of_a_detached_house_in_the_center,
+        Renovation_of_a_detached_house_in_the_center2,
+        Renovation_of_a_detached_house_in_the_center3
+      ]
+    },
+    {
+      id: 2,
+      title: {
+        el: 'Κατάστημα σε Εμπορικό κέντρο',
+        en: 'Store in a shopping center'
+      },
+      description: {
+        el: 'Σχεδιασμός και υλοποίηση καταστήματος σε εμπορικό κέντρο',
+        en: 'Design and implementation of a store in a shopping center'
+      },
+      images: [
+        store_in_a_shopping_center,
+        store_in_a_shopping_center2,
+        store_in_a_shopping_center3,
+        store_in_a_shopping_center4,
+        store_in_a_shopping_center5,
+        store_in_a_shopping_center6,
+        store_in_a_shopping_center7,
+        store_in_a_shopping_center8,
+        store_in_a_shopping_center9
+      ]
+    },
+    {
+      id: 3,
+      title: {
+        el: 'Aνάπλαση μονοκατοικίας στο κέντρο',
+        en: 'Renovation of Second detached house in the center'
+      },
+      description: {
+        el: 'Ανάπλαση δεύτερης μονοκατοικίας στο κέντρο της πόλης',
+        en: 'Renovation of second detached house in the city center'
+      },
+      images: [
+        Renovation_of_Second_detached_house_in_the_center,
+        Renovation_of_Second_detached_house_in_the_center2,
+        Renovation_of_Second_detached_house_in_the_center3,
+        Renovation_of_Second_detached_house_in_the_center4,
+        Renovation_of_Second_detached_house_in_the_center5
+      ]
+    },
+    {
+      id: 4,
+      title: {
         el: 'Νέο Έργο - Μονοκατοικία στις Σάπες',
         en: 'New Project - House in Sapes'
       },
@@ -362,7 +427,7 @@ const ArchitecturalOffice = () => {
       images: [lop, lop2]
     },
     {
-      id: 2,
+      id: 5,
       title: {
         el: 'Μελέτη Ανέγερσης Ισόγειας Μονοκατοικίας',
         en: 'Single-Story House Construction Study'
@@ -374,7 +439,7 @@ const ArchitecturalOffice = () => {
       images: [as, ad, af, ag, ah, aj, ak, al]
     },
     {
-      id: 3,
+      id: 6,
       title: {
         el: 'Προκατασκευασμένες Κατοικίες στον Προφήτη Ηλία',
         en: 'Prefabricated Houses in Profitis Ilias'
@@ -390,7 +455,7 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
       images: [z, x, c, v, b, n, m]
     },
     {
-      id: 4,
+      id: 7,
       title: {
         el: 'Μονοκατοικία στην Παραλία Αρωγής',
         en: 'House in Arogi Beach'
@@ -402,7 +467,7 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
       images: [f1, f2, f3]
     },
     {
-      id: 5,
+      id: 8,
       title: {
         el: 'Διώροφη Μονοκατοικία με Σοφίτα στην Εκτενεπόλ',
         en: 'Two-story House with Attic in Ektenepol'
@@ -414,7 +479,7 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
       images: [to, to1]
     },
     {
-      id: 6,
+      id: 9,
       title: {
         el: 'Πολυώροφα Κτίρια Κατοικιών στην Κομοτηνή',
         en: 'Past Multi Storey Residential Projects in Komotini'
@@ -424,7 +489,6 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
         en: 'Past multi storey residential projects. Komotini.'
       },
       images: [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10]
-<<<<<<< HEAD
     },
     {
       title: {
@@ -866,8 +930,6 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
         olderProjects3,
         olderProjects4
       ]
-=======
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     }
   ];
 
@@ -930,7 +992,6 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
     }
   }, [language]);
 
-<<<<<<< HEAD
   const detailedServices = {
     el: [
       {
@@ -1026,8 +1087,6 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
     ]
   };
 
-=======
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -1113,7 +1172,6 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Detailed Services Section */}
       <div className="bg-gradient-to-br from-gray-50 to-white py-20">
         <div className="container mx-auto px-4">
@@ -1172,8 +1230,6 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
         </div>
       </div>
 
-=======
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
       {/* Projects Section */}
       <div className="py-16">
         <div className="max-w-7xl mx-auto px-4">

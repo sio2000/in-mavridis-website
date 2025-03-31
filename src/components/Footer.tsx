@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Building2, Phone, Mail, MapPin, Facebook, Instagram, Clock, Linkedin } from 'lucide-react';
-=======
-import { Building2, Phone, Mail, MapPin, Facebook, Instagram, Clock } from 'lucide-react';
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { Link } from 'react-router-dom';
@@ -27,7 +23,6 @@ const Footer = () => {
     }
   };
 
-<<<<<<< HEAD
   const socialLinks = [
     {
       name: 'Facebook Main',
@@ -42,14 +37,6 @@ const Footer = () => {
       label: language === 'el' ? 'Γραφείο' : 'Office',
       variant: 'office',
       color: 'bg-red-100 hover:bg-red-200'
-=======
-  const socialMedia = [
-    {
-      name: 'Facebook',
-      icon: Facebook,
-      url: 'https://www.facebook.com/mavridiskomotini',
-      color: 'bg-[#1877F2] hover:bg-[#0d6efd]'
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     },
     {
       name: 'Instagram',
@@ -58,15 +45,12 @@ const Footer = () => {
       color: 'bg-[#E4405F] hover:bg-[#d62e4c]'
     },
     {
-<<<<<<< HEAD
       name: 'LinkedIn',
       icon: Linkedin,
       url: 'https://www.linkedin.com/in/ioannis-mavridis-9689843a/',
       color: 'bg-[#0A66C2] hover:bg-[#004182]'
     },
     {
-=======
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
       name: 'TikTok',
       icon: ({ className }: { className?: string }) => (
         <svg 
@@ -184,7 +168,6 @@ const Footer = () => {
                 {language === 'el' ? 'Ακολουθήστε μας' : 'Follow Us'}
               </h3>
               <div className="flex space-x-4">
-<<<<<<< HEAD
                 {socialLinks.map((link) => (
                   <motion.a
                     key={link.name}
@@ -210,19 +193,6 @@ const Footer = () => {
                     {link.label && (
                       <span className="sr-only">{link.label}</span>
                     )}
-=======
-                {socialMedia.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-2 rounded-full text-white ${social.color} transition-all duration-300`}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <social.icon className="h-6 w-6" />
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
                   </motion.a>
                 ))}
               </div>

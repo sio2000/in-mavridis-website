@@ -288,7 +288,6 @@ export const translations = {
     },
     engineeringServices: {
       title: 'Υπηρεσίες Μηχανικού',
-<<<<<<< HEAD
       subtitle: 'Ολοκληρωμένες λύσεις για κάθε κατασκευαστικό έργο',
       description: 'Ολοκληρωμένες υπηρεσίες μηχανικού στην Κομοτηνή.',
       aboutUs: {
@@ -330,41 +329,6 @@ export const translations = {
           '**Πιστοποιημένος Επιθεωρητής Καταλυμμάτων** για Κατηγοριοποίηση Ξενοδοχειακών Μονάδων (Αστεροποίηση) / Ενοικιαζόμενων Δωματίων (Κλειδιά) **TUV Austria**'
         ]
       }
-=======
-      description: 'Ολοκληρωμένες υπηρεσίες μηχανικού στην Κομοτηνή.',
-      officeInfo: {
-        title: 'Λίγα λόγια για το γραφείο μας',
-        description: 'Ανακαλύψτε την ιστορία μας και τις αξίες που μας καθοδηγούν στην παροχή υπηρεσιών.',
-        readMore: 'Διαβάστε περισσότερα',
-      },
-      services: {
-        title: 'Οι Υπηρεσίες μας',
-        items: [
-          'Αρχιτεκτονικός σχεδιασμός και αρχιτεκτονική μελέτη – επίβλεψη',
-          'Έκδοση πλήρους φακέλου οικοδομικής άδειας και επίβλεψη του έργου',
-          'Έκδοση αδειών λειτουργίας υγειονομικού ενδιαφέροντος παντός τύπου',
-          'Ενεργειακή επιθεώρηση – ένταξη στο πρόγραμμα "εξοικονομώ κατ\'οίκον"',
-          'Ελεγκτής δόμησης',
-          'Ανακαινίσεις διαμερισμάτων και καταστημάτων',
-          'Διακόσμηση εσωτερικών χώρων',
-          'Φωτορεαλισμός και virtual video'
-        ]
-      },
-      experience: {
-        title: 'Η Εμπειρία μας',
-        items: [
-          '17 ετής συνεχής εμπειρία στον Τομέα Στατικών Μελετών',
-          '5 ετής εμπειρία στον τομέα του Ενεργειακού Σχεδιασμού',
-          'Πιστοποιημένος Ελεγκτής Δόμησης',
-          '17 ετής εμπειρία στην Κατασκευή Ιδιωτικών Έργων',
-          '8 ετής εμπειρία στον Τομέα Εκτιμήσεων Ακινήτων',
-          'Εμπειρία σε Τεχνικές Πραγματογνωμοσύνες',
-          'Μέλος της Μόνιμης Επιτροπής Χωροταξίας και Περιβάλλοντος του ΤΕΕ Θράκης'
-        ]
-      },
-      architectOffice: 'ARCHInima – Αρχιτεκτονικό Γραφείο',
-      ceo: 'Γιάννης Μαυρίδης, Διευθύνων Σύμβουλος'
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     },
     blog: {
       title: {
@@ -568,11 +532,7 @@ export const translations = {
           ]
         },
         specialized: {
-<<<<<<< HEAD
           title: 'Specialized Services',
-=======
-          title: 'Specialized Works',
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
           items: [
             'Mechanical network design',
             'Electrical works',
@@ -614,11 +574,7 @@ export const translations = {
         ]
       },
       certifications: {
-<<<<<<< HEAD
         title: 'Certifications',
-=======
-        title: 'Professional Certifications',
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
         expertValuer: {
           title: 'Expert Valuer In Real Estate Property (REV) TEGoVA',
           items: [
@@ -808,7 +764,6 @@ export const translations = {
     },
     engineeringServices: {
       title: 'Engineering Services',
-<<<<<<< HEAD
       subtitle: 'Comprehensive solutions for every construction project',
       description: 'Comprehensive engineering services in Komotini.',
       aboutUs: {
@@ -850,41 +805,6 @@ export const translations = {
           '**Certified Accommodation Inspector** for **Hotel Unit Classification** (Star Rating) / **Rental Rooms** (Keys) **TUV Austria**'
         ]
       }
-=======
-      description: 'Comprehensive engineering services in Komotini.',
-      officeInfo: {
-        title: 'A Few Words About Our Office',
-        description: 'Discover our story and the values that guide us in providing services.',
-        readMore: 'Read More',
-      },
-      services: {
-        title: 'Our Services',
-        items: [
-          'Architectural design and architectural study – supervision',
-          'Issuance of a complete building permit file and supervision of the project',
-          'Issuance of health interest operation permits of all types',
-          'Energy inspection – inclusion in the "Energy Saving at Home" program',
-          'Building inspector',
-          'Renovations of apartments and shops',
-          'Interior decoration',
-          'Photorealism and virtual video'
-        ]
-      },
-      experience: {
-        title: 'Our Experience',
-        items: [
-          '17 years of continuous experience in Structural Studies',
-          '5 years of experience in Energy Design',
-          'Certified Building Inspector',
-          '17 years of experience in Private Construction Projects',
-          '8 years of experience in Real Estate Valuations',
-          'Experience in Technical Expertise',
-          'Member of the Permanent Committee for Spatial Planning and Environment'
-        ]
-      },
-      architectOffice: 'ARCHInima – Architectural Office',
-      ceo: 'Giannis Mavridis, Company CEO'
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     },
     blog: {
       title: {
@@ -909,11 +829,7 @@ export const translations = {
       location: {
         el: [
           'Η εταιρεία μας εδρεύει στην Κομοτηνή, πρωτεύουσα της Θράκης, στη Βόρεια Ελλάδα.',
-<<<<<<< HEAD
           'Η περιοχή μας συνορεύει με τη Βουλγαρία στα βόρεια (15 χλμ. σύνορα) και με την Τουρκία στα ανατολικά (80 χλμ. σύνορα). Η Θεσσαλονίκη, το δεύτερο μεγαλύτερο οικονομικό κέντρο της Ελλάδας, απέχει 270χλμ. (2ώρες μέσω αυτοκινητόδρομου). Το Πλόβντιβ, το δεύτερο μεγαλύτερο οικονομικό κέντρο της Βουλγαρίας, απέχει 1,5ώρες οδικώς, ενώ η Κωνσταντινούπολη είναι προσβάσιμη σε 3,5ώρες με αυτοκίνητο, με καθημερινές διεθνείς συγκοινωνίες, συμπεριλαμβανομένης σύνδεσης με το Αεροδρόμιο Ατατούρκ.',
-=======
-          'Η περιοχή μας συνορεύει με τη Βουλγαρία στα βόρεια (15 χλμ. σύνορα) και με την Τουρκία στα ανατολικά (80 χλμ. σύνορα). Η Θεσσαλονίκη, το δεύτερο μεγαλύτερο οικονομικό κέντρο της Ελλάδας, απέχει 270 χλμ. (2 ώρες μέσω αυτοκινητόδρομου). Το Πλόβντιβ, το δεύτερο μεγαλύτερο οικονομικό κέντρο της Βουλγαρίας, απέχει 1,5 ώρα οδικώς, ενώ η Κωνσταντινούπολη είναι προσβάσιμη σε 3,5 ώρες με αυτοκίνητο, με καθημερινές διεθνείς συγκοινωνίες, συμπεριλαμβανομένης σύνδεσης με το Αεροδρόμιο Ατατούρκ.',
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
           'Αυτά τα χαρακτηριστικά τοποθετούν τη Θράκη στο επίκεντρο μιας αναδυόμενης τουριστικής αγοράς...'
         ],
         en: [

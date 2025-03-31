@@ -12,15 +12,12 @@ import t6 from '../assets/images/t6.jpg';
 import t7 from '../assets/images/t7.jpg';
 import t8 from '../assets/images/t8.jpg';
 import t9 from '../assets/images/d6.jpg';
-<<<<<<< HEAD
 import detachedHouse1 from '../assets/images/detached_house_.jpg';
 import detachedHouse2 from '../assets/images/detached_house_2.jpg';
 import detachedHouse3 from '../assets/images/detached_house_3.jpg';
 import detachedHouse4 from '../assets/images/detached_house_4.jpg';
 import detachedHouse5 from '../assets/images/detached_house_5.jpg';
 import detachedHouse6 from '../assets/images/detached_house_6.jpg';
-=======
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
 
 const ArchitecturalDesign = () => {
   const { language } = useLanguage();
@@ -135,7 +132,6 @@ const ArchitecturalDesign = () => {
     }
   };
 
-<<<<<<< HEAD
   const projectImages = [
     {
       image: t1,
@@ -244,8 +240,6 @@ const ArchitecturalDesign = () => {
     }
   ];
 
-=======
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section - Made smaller */}
@@ -364,7 +358,6 @@ const ArchitecturalDesign = () => {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-<<<<<<< HEAD
               {projectImages.map((project, index) => (
                 <motion.div
                   key={index}
@@ -382,21 +375,6 @@ const ArchitecturalDesign = () => {
                     />
                     <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                   </div>
-=======
-              {[t1, t2, t3, t4, t5, t6, t7, t8, t9].map((image, index) => (
-                <motion.div
-                  key={index}
-                  className="relative aspect-square overflow-hidden rounded-lg shadow-md"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 + index * 0.1 }}
-                >
-                  <img
-                    src={image}
-                    alt={`Project sample ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
                 </motion.div>
               ))}
             </div>

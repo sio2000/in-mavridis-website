@@ -5,6 +5,25 @@ import Slider from 'react-slick';
 import { useLanguage } from '../context/LanguageContext';
 import { useNavigate } from 'react-router-dom';
 import { projects, type Category } from '../data/projects';
+import {
+  RenovationSecondDetachedHouseCenter1,
+  RenovationSecondDetachedHouseCenter2,
+  RenovationSecondDetachedHouseCenter3,
+  RenovationSecondDetachedHouseCenter4,
+  RenovationSecondDetachedHouseCenter5,
+  constructionDetachedHouse1,
+  constructionDetachedHouse2,
+  constructionDetachedHouse3,
+  constructionDetachedHouse4,
+  constructionDetachedHouse5,
+  constructionDetachedHouse6,
+  constructionDetachedHouse7,
+  constructionDetachedHouse8,
+  constructionHouseKomotini1,
+  constructionHouseKomotini2,
+  constructionHouseKomotini3,
+  constructionHouseKomotini4
+} from '../assets/images';
 
 interface Project {
   id: number;
@@ -38,6 +57,61 @@ const Portfolio = () => {
     { id: 'interior', label: { el: 'Εσωτερική Διακόσμηση', en: 'Interior Decoration' } },
     { id: 'residential', label: { el: 'Κτίρια Κατοικιών', en: 'Residential Buildings' } },
     { id: 'suburban', label: { el: 'Προάστια', en: 'Suburban' } }
+  ];
+
+  const constructionProjects = [
+    {
+      id: 'renovation-second-detached',
+      title: {
+        el: 'Aνάπλαση μονοκατοικίας στο κέντρο',
+        en: 'Renovation of second detached house in center'
+      },
+      images: [
+        RenovationSecondDetachedHouseCenter1,
+        RenovationSecondDetachedHouseCenter2,
+        RenovationSecondDetachedHouseCenter3,
+        RenovationSecondDetachedHouseCenter4,
+        RenovationSecondDetachedHouseCenter5
+      ]
+    },
+    {
+      id: 'construction-detached-house',
+      title: {
+        el: 'Κατασκευή μονοκατοικίας',
+        en: 'Construction of a detached house'
+      },
+      description: {
+        el: 'Εξέλιξη κατασκευής- επιχρίσματα, εργασίες αποπεράτωσης',
+        en: 'Construction progress - plastering, completion works'
+      },
+      images: [
+        constructionDetachedHouse1,
+        constructionDetachedHouse2,
+        constructionDetachedHouse3,
+        constructionDetachedHouse4,
+        constructionDetachedHouse5,
+        constructionDetachedHouse6,
+        constructionDetachedHouse7,
+        constructionDetachedHouse8
+      ]
+    },
+    {
+      id: 'construction-house-komotini',
+      title: {
+        el: 'Ανέγερση Μονοκατοικίας στην Κομοτηνή',
+        en: 'House Construction in Komotini'
+      },
+      description: {
+        el: 'Εξέλιξη κατασκευής- αποπεράτωση πλακών σκυροδέματος',
+        en: 'Construction progress - completion of concrete slabs'
+      },
+      images: [
+        constructionHouseKomotini1,
+        constructionHouseKomotini2,
+        constructionHouseKomotini3,
+        constructionHouseKomotini4
+      ]
+    }
   ];
 
   const filteredProjects = projects.filter(project => {

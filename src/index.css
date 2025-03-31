@@ -278,3 +278,27 @@ html {
   font-style: normal;
   font-display: swap;
 }
+
+/* Προσθήκη στο υπάρχον CSS */
+.custom-scrollbar-visible {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.7) rgba(229, 231, 235, 0.3);
+}
+
+.custom-scrollbar-visible::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar-visible::-webkit-scrollbar-track {
+  background: rgba(229, 231, 235, 0.3);
+  border-radius: 3px;
+}
+
+.custom-scrollbar-visible::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.7);
+  border-radius: 3px;
+}
+
+.custom-scrollbar-visible::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.9);
+}

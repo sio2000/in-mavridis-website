@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -222,28 +221,11 @@ interface CurrentSlides {
 
 interface ProjectImages {
   [key: ProjectKey]: string[];
-=======
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Building2, Calculator, Building, Ruler, FileText, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, useScroll, AnimatePresence } from 'framer-motion';
-import { useTranslation } from '../hooks/useTranslation';
-import { useLanguage } from '../context/LanguageContext';
-import t2 from '../assets/images/t2.jpg';
-import architecturalDesign from '../assets/images/architectural-design.jpg';
-import img77 from '../assets/images/77.jpg';
-import imgRt5 from '../assets/images/rt5.jpg';
-
-interface FeatureItem {
-  title: string;
-  description: string;
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
 }
 
 const certifications = {
   el: {
     column1: [
-<<<<<<< HEAD
       'Πιστοποιημένος Ελεγκτής Δόμησης. Για έργα της μεγαλύτερης κατηγορίας.',
       'Πιστοποιημένος Επιθεωρητής Καταλυμάτων. Για κατηγοριοποίηση ξενοδοχειακών μονάδων (αστεροποίηση) και ενοικιαζόμενων δωματίων (κλειδιά) από την <strong>TÜV Austria</strong>.',
       'Πιστοποίηση Επαγγελματικής Αναγνώρισης <strong>REV</strong> της <strong>TEGoVA</strong>.',
@@ -258,27 +240,10 @@ const certifications = {
       'Μέλος του <strong>Συλλόγου Εκτιμητών Ελλάδος (Σ.ΕΚ.Ε.)</strong>.',
       'Συμμετοχή στην <strong>TEGoVA</strong>.',
       'Εμπειρία στις <strong>Εκτιμήσεις Ακινήτων</strong>, με συνεργασίες με διάφορες τράπεζες (Πανελλήνια, Ασπίς, Αγροτική, Πειραιώς).'
-=======
-      '<strong>Πιστοποιημένος Ελεγκτής Δόμησης</strong>. Για έργα της μεγαλύτερης κατηγορίας.',
-      '<strong>Πιστοποιημένος Επιθεωρητής Καταλυμάτων</strong>. Για κατηγοριοποίηση ξενοδοχειακών μονάδων (αστεροποίηση) και ενοικιαζόμενων δωματίων (κλειδιά) από την <strong>TÜV Austria</strong>.',
-      'Εμπειρία στις <strong>Εκτιμήσεις Ακινήτων</strong>, με συνεργασίες με διάφορες τράπεζες (Πανελλήνια, Ασπίς, Αγροτική, Πειραιώς).',
-      'Εξειδίκευση σε <strong>Ενεργειακές Μελέτες και Επιθεωρήσεις</strong> βάσει <strong>ΚΕΝΑΚ</strong>.',
-      'Διεκπεραίωση προγράμματος <strong>"Εξοικονομώ κατ\' Οίκον"</strong>.',
-      '<strong>Expert Valuer in Real Estate Property (REV) – TEGoVA</strong>.',
-      '<strong>Πιστοποιημένη Εκτιμήτρια Ακινήτων</strong>, διεξάγοντας εκτιμήσεις σύμφωνα με τα Ευρωπαϊκά Πρότυπα.'
-    ],
-    column2: [
-      '<strong>ΜΕΛΟΣ ΕΠΑΓΓΕΛΜΑΤΙΚΩΝ ΟΡΓΑΝΙΣΜΩΝ</strong>',
-      '<strong>Πιστοποίηση ISO/IEC 17024</strong>.',
-      '<strong>Μέλος του Συλλόγου Εκτιμητών Ελλάδος (Σ.ΕΚ.Ε.)</strong>.',
-      '<strong>Συμμετοχή στην TEGoVA</strong>.',
-      '<strong>Εντεταλμένος Χορηγός REV της TEGoVA</strong>.'
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     ]
   },
   en: {
     column1: [
-<<<<<<< HEAD
       'Certified Building Inspector. For projects of the highest category.',
       'Certified Accommodation Inspector. For categorization of hotel units (star rating) and rental rooms (keys) by <strong>TÜV Austria</strong>.',
       'Professional Recognition Certification <strong>REV</strong> of <strong>TEGoVA</strong>.',
@@ -293,69 +258,15 @@ const certifications = {
       'Member of the <strong>Hellenic Valuers Association (HVA)</strong>.',
       'Participation in <strong>TEGoVA</strong>.',
       'Experience in <strong>Real Estate Valuations</strong>, with collaborations with various banks (Panellinia, Aspis, Agricultural, Piraeus).'
-=======
-      '<strong>Certified Building Inspector</strong> for large-scale projects.',
-      '<strong>Certified Accommodation Inspector</strong> for the classification of <strong>hotel units</strong> (star rating) and <strong>rental rooms</strong> (keys) by <strong>TÜV Austria</strong>.',
-      'Expertise in <strong>Real Estate Valuations</strong>, with collaborations with various banks (Panellinia, Aspis, Agricultural Bank, Piraeus Bank).',
-      'Specialization in <strong>Energy Studies and Inspections</strong> based on <strong>KENAK</strong>.',
-      'Execution of programs such as <strong>"Exoikonomo kat\' Oikon"</strong>.',
-      '<strong>Expert Valuer in Real Estate Property (REV) – TEGoVA</strong>.',
-      '<strong>Certified Real Estate Appraiser</strong>, conducting valuations in accordance with European Standards.'
-    ],
-    column2: [
-      '<strong>MEMBERSHIP IN PROFESSIONAL ORGANIZATIONS</strong>',
-      '<strong>ISO/IEC 17024 Certification</strong>.',
-      '<strong>Member of the Hellenic Association of Valuers (Σ.ΕΚ.Ε.)</strong>.',
-      '<strong>Participation in TEGoVA</strong>.',
-      '<strong>Designated REV Sponsor of TEGoVA</strong>.'
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     ]
   }
 };
 
-<<<<<<< HEAD
 const Home = () => {
   const { language } = useLanguage();
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [currentSlides, setCurrentSlides] = useState<CurrentSlides>({
-    project1: 0,
-    project2: 0,
-    project3: 0,
-    project4: 0,
-    project5: 0,
-    project6: 0,
-    project7: 0,
-    project8: 0,
-    project9: 0,
-    project10: 0,
-    project11: 0,
-    project12: 0,
-    project13: 0,
-    project14: 0,
-    project15: 0,
-    project16: 0,
-    project17: 0,
-    project18: 0,
-    project19: 0,
-    project20: 0,
-    project21: 0,
-    project22: 0,
-    project23: 0,
-    project24: 0,
-    project25: 0,
-    project26: 0,
-    project27: 0,
-    project28: 0,
-    project29: 0,
-    project30: 0,
-    project31: 0,
-    project32: 0,
-    project33: 0,
-    project34: 0,
-    project35: 0,
-    project36: 0
-  });
+  const [currentSlides, setCurrentSlides] = useState<CurrentSlides>({});
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   const handleImageClick = (image: string) => {
@@ -553,10 +464,10 @@ const Home = () => {
       "House in Maronia",
       "Three-story Building",
       "House with Roof",
-      "Ground Floor Holiday Homes",
-      "House in Arogi Rodopi",
-      "Maronia Rental apartments Resort",
-      "Platanitis Beach Maronia",
+      "Construction of ground floor holiday homes",
+      "Construction of a house in Arogi Rodopi",
+      "Rental apartments complex in Maronia",
+      "Complex of six summer residences",
       "Structure Repair Evaluation Research",
       "House Photorealism",
       "Residential Building Construction",
@@ -708,27 +619,94 @@ const Home = () => {
   const engineeringServices = [
     {
       el: 'Στατικές Μελέτες & Μελέτες Εφαρμογής',
-      en: 'Structural Studies & Implementation Studies'
+      en: 'Static Studies & Implementation Studies'
     },
     {
       el: 'Χρονικός Προγραμματισμός Project Management',
-      en: 'Project Management & Time Scheduling'
+      en: 'Project Management & Timeline Planning'
     },
     {
       el: 'Κοστολόγηση ανα στάδιο εργασιών (και ασφαλ. Εισφορών)',
-      en: 'Stage-by-stage Costing (including insurance contributions)'
+      en: 'Cost analysis per work stage (including insurance contributions)'
     },
     {
       el: 'Επιβλέψεις με χρονικό προγρ/σμό κατασκευής καταστημάτων, ανακαινίσεων κατοικιών',
-      en: 'Supervision with construction timeline for stores and home renovations'
+      en: 'Supervision with timeline planning for store construction and home renovations'
     },
-    // ... συνέχεια των υπηρεσιών
+    {
+      el: 'Εκδοση αναλυτικού προυπολογισμού, Πινακες 1 κλπ, Πίνακες ικα',
+      en: 'Detailed budget issuance, Tables 1 etc., IKA tables'
+    },
+    {
+      el: 'Στατικές ενισχύσεις, Βλητρώσεις, Αγκυρώσεις, μέτρηση υγρασίας',
+      en: 'Structural reinforcements, Doweling, Anchoring, moisture measurement'
+    },
+    {
+      el: 'Ειδίκευση σε διάβρωση σκυροδέματος',
+      en: 'Specialization in concrete corrosion'
+    },
+    {
+      el: 'NDT τεστ αποδοτικότητας φέροντος οργανισμού υπάρχοντος',
+      en: 'NDT performance testing of existing load-bearing structure'
+    },
+    {
+      el: 'Επεμβάσεις σε παλαιότερα κτίσματα, Επισκευές κτιρίων',
+      en: 'Interventions in older buildings, Building repairs'
+    },
+    {
+      el: 'Φάκελος Αδ. Λειτουργίας καταστημάτων, Γνωστοποίηση με πλήρη αρχείο',
+      en: 'Store operation license file, Notification with complete archive'
+    },
+    {
+      el: 'Αδειες λειτουργίας καταστημάτων, ΚΥΕ, Βιοτεχνιών, Φροντιστηρίων',
+      en: 'Operating licenses for stores, Food Service, Industries, Tutorial Schools'
+    },
+    {
+      el: 'Μελέτη Ηχομόνωσης',
+      en: 'Sound insulation study'
+    },
+    {
+      el: 'Πιστοποιημένος Τεχνικός Ασφαλείας',
+      en: 'Certified Safety Engineer'
+    },
+    {
+      el: 'Αδειες δόμησης, Εγκρίσεις εργασιών Μικρής Κλίμακας',
+      en: 'Building permits, Small-scale work approvals'
+    },
+    {
+      el: 'Ελεγχοι δόμησης (μέγιστη κατηγορία)',
+      en: 'Building inspections (maximum category)'
+    },
+    {
+      el: 'Επιθεωρήσεις Προσβασιμότητας (πιστοπ. Ελεγκτής)',
+      en: 'Accessibility Inspections (certified Inspector)'
+    },
+    {
+      el: 'Επιθεωρήσεις προσεισμικού ελέγχου (πιστοπ. Ελεγκτής)',
+      en: 'Pre-seismic control inspections (certified Inspector)'
+    },
+    {
+      el: 'Ταυτότητα Κτιρίου',
+      en: 'Building Identity'
+    },
+    {
+      el: 'Ενεργειακός Επιθεωρητής',
+      en: 'Energy Inspector'
+    },
+    {
+      el: 'Ρυθμίσεις Αυθαιρέτων',
+      en: 'Unauthorized building settlements'
+    }
   ];
 
   const architecturalServices = [
     {
       el: 'Υπηρεσίες Αρχιτέκτων, Σχεδιασμός, Υλοποίηση',
       en: 'Architectural Services, Design, Implementation'
+    },
+    {
+      el: 'Ειδίκευση στην νομοθεσία ακινήτων πολεοδομικά και φορολογικά',
+      en: 'Specialization in real estate legislation, urban planning and taxation'
     },
     {
       el: 'Ειδίκευση σε έργα ιδιωτικής κατοικίας, και τουριστικά καταλύματα',
@@ -808,6 +786,89 @@ const Home = () => {
     }
   ];
 
+  const constructionServices = [
+    {
+      el: 'Στατικές Μελέτες & Μελέτες Εφαρμογής',
+      en: 'Static Studies & Implementation Studies'
+    },
+    {
+      el: 'Χρονικός Προγραμματισμός Project Management',
+      en: 'Project Management & Timeline Planning'
+    },
+    {
+      el: 'Κοστολόγηση ανα στάδιο εργασιών (και ασφαλ. Εισφορών)',
+      en: 'Cost analysis per work stage (including insurance contributions)'
+    },
+    {
+      el: 'Επιβλέψεις με χρονικό προγρ/σμό κατασκευής καταστημάτων, ανακαινίσεων κατοικιών',
+      en: 'Supervision with timeline planning for store construction and home renovations'
+    },
+    {
+      el: 'Εκδοση αναλυτικού προυπολογισμού, Πινακες 1 κλπ, Πίνακες ικα',
+      en: 'Detailed budget issuance, Tables 1 etc., IKA tables'
+    },
+    {
+      el: 'Στατικές ενισχύσεις, Βλητρώσεις, Αγκυρώσεις, μέτρηση υγρασίας',
+      en: 'Structural reinforcements, Doweling, Anchoring, moisture measurement'
+    },
+    {
+      el: 'Ειδίκευση σε διάβρωση σκυροδέματος',
+      en: 'Specialization in concrete corrosion'
+    },
+    {
+      el: 'NDT τεστ αποδοτικότητας φέροντος οργανισμού υπάρχοντος',
+      en: 'NDT performance testing of existing load-bearing structure'
+    },
+    {
+      el: 'Επεμβάσεις σε παλαιότερα κτίσματα, Επισκευές κτιρίων',
+      en: 'Interventions in older buildings, Building repairs'
+    },
+    {
+      el: 'Φάκελος Αδ. Λειτουργίας καταστημάτων, Γνωστοποίηση με πλήρη αρχείο',
+      en: 'Store operation license file, Notification with complete archive'
+    },
+    {
+      el: 'Αδειες λειτουργίας καταστημάτων, ΚΥΕ, Βιοτεχνιών, Φροντιστηρίων',
+      en: 'Operating licenses for stores, Food Service, Industries, Tutorial Schools'
+    },
+    {
+      el: 'Μελέτη Ηχομόνωσης',
+      en: 'Sound insulation study'
+    },
+    {
+      el: 'Πιστοποιημένος Τεχνικός Ασφαλείας',
+      en: 'Certified Safety Engineer'
+    },
+    {
+      el: 'Αδειες δόμησης, Εγκρίσεις εργασιών Μικρής Κλίμακας',
+      en: 'Building permits, Small-scale work approvals'
+    },
+    {
+      el: 'Ελεγχοι δόμησης (μέγιστη κατηγορία)',
+      en: 'Building inspections (maximum category)'
+    },
+    {
+      el: 'Επιθεωρήσεις Προσβασιμότητας (πιστοπ. Ελεγκτής)',
+      en: 'Accessibility Inspections (certified Inspector)'
+    },
+    {
+      el: 'Επιθεωρήσεις προσεισμικού ελέγχου (πιστοπ. Ελεγκτής)',
+      en: 'Pre-seismic control inspections (certified Inspector)'
+    },
+    {
+      el: 'Ταυτότητα Κτιρίου',
+      en: 'Building Identity'
+    },
+    {
+      el: 'Ενεργειακός επιθεωρητής',
+      en: 'Energy Inspector'
+    },
+    {
+      el: 'Ρυθμίσεις Αυθαιρέτων',
+      en: 'Unauthorized building settlements'
+    }
+  ];
+
   const handleSelectedProject = (projectNumber: number) => {
     if (selectedProject === projectNumber) {
       setSelectedProject(null);
@@ -818,9 +879,8 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Project Management Section */}
-      <div 
-        className="relative bg-cover bg-center py-32 md:py-48"
+      {/* Hero Section - ΝΕΟ */}
+      <div className="relative bg-cover bg-center py-16 md:py-24"
         style={{ 
           backgroundImage: `url(${homeSectionBackground})`,
           backgroundPosition: 'center',
@@ -839,122 +899,40 @@ const Home = () => {
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 italic">
               {language === 'el' 
-                ? <span dangerouslySetInnerHTML={{ __html: 'Διπλ. Πολιτικός Μηχανικός (ισοτιμία Ε.Μ.Π.)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Αρχιτέκτων Μηχανικός Α.Π.Θ.' }} />
-                : <span dangerouslySetInnerHTML={{ __html: 'Civil Engineer (NTUA eq.)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;Architect Engineer AUTH' }} />
+                ? <span>Διπλ. Πολιτικός Μηχανικός (ισοτιμία Ε.Μ.Π.) • Αρχιτέκτων Μηχανικός Α.Π.Θ.</span>
+                : <span>Civil Engineer (NTUA eq.) • Architect Engineer AUTH</span>
               }
             </p>
           </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Construction Management Card */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 hover:shadow-lg transition-shadow"
+              className="bg-white/95 backdrop-blur-sm rounded-lg p-6 hover:shadow-lg transition-shadow h-[300px] overflow-y-auto custom-scrollbar w-full max-w-xl"
             >
-              <div className="flex items-start mb-8">
-                <div className="bg-blue-100 p-3 rounded-full mt-1">
-                  <Building2 className="h-8 w-8 text-blue-600" />
+              <div className="flex items-center mb-4">
+                <div className="bg-blue-100 p-3 rounded-full">
+                  <Building2 className="h-6 w-6 text-blue-600" />
                 </div>
-                <h3 className="text-2xl font-bold ml-4 text-gray-800 leading-tight">
-                  {language === 'el' 
-                    ? 'Διαχείριση Εργοταξίου & Έργων'
-                    : 'Construction Site & Project Management'}
+                <h3 className="text-xl font-semibold ml-4 text-gray-800">
+                  {language === 'el' ? 'Διαχείριση Εργοταξίου & Έργων' : 'Construction & Project Management'}
                 </h3>
               </div>
-              <ul className="space-y-4">
-                {[
-                  {
-                    el: 'Στατικές Μελέτες & Μελέτες Εφαρμογής',
-                    en: 'Structural Studies & Implementation Studies'
-                  },
-                  {
-                    el: 'Χρονικός Προγραμματισμός Project Management',
-                    en: 'Project Management & Time Scheduling'
-                  },
-                  {
-                    el: 'Κοστολόγηση ανα στάδιο εργασιών (και ασφαλ. Εισφορών)',
-                    en: 'Stage-by-stage Costing (including insurance contributions)'
-                  },
-                  {
-                    el: 'Επιβλέψεις με χρονικό προγρ/σμό κατασκευής καταστημάτων, ανακαινίσεων κατοικιών',
-                    en: 'Supervision with construction timeline for stores and home renovations'
-                  },
-                  {
-                    el: 'Εκδοση αναλυτικού προυπολογισμού, Πινακες 1 κλπ, Πίνακες ικα',
-                    en: 'Detailed budget issuance, Tables 1 etc., IKA tables'
-                  },
-                  {
-                    el: 'Στατικές ενισχύσεις, Βλητρώσεις, Αγκυρώσεις, μέτρηση υγρασίας',
-                    en: 'Structural reinforcements, Doweling, Anchoring, moisture measurement'
-                  },
-                  {
-                    el: 'Ειδίκευση σε διάβρωση σκυροδέματος',
-                    en: 'Specialization in concrete corrosion'
-                  },
-                  {
-                    el: 'NDT τεστ αποδοτικότητας φέροντος οργανισμού υπάρχοντος',
-                    en: 'NDT performance testing of existing load-bearing structure'
-                  },
-                  {
-                    el: 'Επεμβάσεις σε παλαιότερα κτίσματα, Επισκευές κτιρίων',
-                    en: 'Interventions in older buildings, Building repairs'
-                  },
-                  {
-                    el: 'Φάκελος Αδ. Λειτουργίας καταστημάτων, Γνωστοποίηση με πλήρη αρχείο',
-                    en: 'Store operation license file, Notification with complete archive'
-                  },
-                  {
-                    el: 'Αδειες λειτουργίας καταστημάτων, ΚΥΕ, Βιοτεχνιών, Φροντιστηρίων',
-                    en: 'Operating licenses for stores, Food Service, Industries, Tutorial Schools'
-                  },
-                  {
-                    el: 'Μελέτη Ηχομόνωσης',
-                    en: 'Sound Insulation Study'
-                  },
-                  {
-                    el: 'Πιστοποιημένος Τεχνικός Ασφαλείας',
-                    en: 'Certified Safety Engineer'
-                  },
-                  {
-                    el: 'Αδειες δόμησης, Εγκρίσεις εργασιών Μικρής Κλίμακας',
-                    en: 'Building permits, Small-scale work approvals'
-                  },
-                  {
-                    el: 'Ελεγχοι δόμησης (μέγιστη κατηγορία)',
-                    en: 'Building inspections (maximum category)'
-                  },
-                  {
-                    el: 'Επιθεωρήσεις Προσβασιμότητας (πιστοπ. Ελεγκτής)',
-                    en: 'Accessibility Inspections (certified Inspector)'
-                  },
-                  {
-                    el: 'Επιθεωρήσεις προσεισμικού ελέγχου (πιστοπ. Ελεγκτής)',
-                    en: 'Pre-seismic control inspections (certified Inspector)'
-                  },
-                  {
-                    el: 'Ταυτότητα Κτιρίου',
-                    en: 'Building Identity'
-                  },
-                  {
-                    el: 'Ενεργειακός Επιθεωρητής',
-                    en: 'Energy Inspector'
-                  },
-                  {
-                    el: 'Ρυθμίσεις Αυθαιρέτων',
-                    en: 'Unauthorized Building Settlements'
-                  }
-                ].map((item, index) => (
-                  <motion.li
+              <ul className="space-y-3">
+                {constructionServices.map((service, index) => (
+                  <motion.li 
                     key={index}
+                    className="flex items-start space-x-3 text-gray-700"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-start space-x-3"
                   >
-                    <CheckCircle2 className="h-6 w-6 text-blue-500 flex-shrink-0 mt-1" />
-                    <span className="text-gray-700">{language === 'el' ? item.el : item.en}</span>
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
+                    <span>{service[language]}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -965,444 +943,38 @@ const Home = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 hover:shadow-lg transition-shadow"
+              className="bg-white/95 backdrop-blur-sm rounded-lg p-6 hover:shadow-lg transition-shadow h-[300px] overflow-y-auto custom-scrollbar w-full max-w-xl"
             >
-              <div className="flex items-start mb-8">
-                <div className="bg-blue-100 p-3 rounded-full mt-1">
-                  <Ruler className="h-8 w-8 text-blue-600" />
-        </div>
-                <h3 className="text-2xl font-bold ml-4 text-gray-800 leading-tight">
-                  {language === 'el' 
-                    ? 'Αρχιτεκτονικός Σχεδιασμός & Άδειες'
-                    : 'Architectural Design & Permits'}
+              <div className="flex items-center mb-2">
+                <div className="bg-green-100 p-3 rounded-full">
+                  <Ruler className="h-6 w-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold ml-4 text-gray-800">
+                  {language === 'el' ? 'Αρχιτεκτονικός Σχεδιασμός & Άδειες' : 'Architectural Design & Permits'}
                 </h3>
-      </div>
-              <ul className="space-y-4">
-                {[
-                  {
-                    el: 'Υπηρεσίες Αρχιτέκτων, Σχεδιασμός, Υλοποίηση',
-                    en: 'Architectural Services, Design, Implementation'
-                  },
-                  {
-                    el: 'Ειδίκευση σε έργα ιδιωτικής κατοικίας, και τουριστικά καταλύματα',
-                    en: 'Specialization in private residences and tourist accommodations'
-                  },
-                  {
-                    el: 'Οικοδομική άδεια, Εγκρίσεις δόμησης κάθε μορφής, Ηλεκτρ. Παρακολούθηση αδείας',
-                    en: 'Building permit, All types of building approvals, Electronic permit monitoring'
-                  },
-                  {
-                    el: 'Πολεοδομική νομοθεσία και εφαρμογές ανα είδος έργου',
-                    en: 'Urban planning legislation and applications per project type'
-                  },
-                  {
-                    el: 'Έλεγχος νομιμότητας κτιρίου (και ιστορικότητα ανα στάδια και έτη αδειοδοτήσεων)',
-                    en: 'Building legality check (including historical stages and years of licensing)'
-                  },
-                  {
-                    el: 'Ταυτότητα Κτιρίου',
-                    en: 'Building Identity'
-                  },
-                  {
-                    el: 'Ρυθμίσεις Αυθαιρέτων (κατοικίες, καταστήματα, βιοτεχνίες)',
-                    en: 'Unauthorized building settlements (homes, stores, industries)'
-                  },
-                  {
-                    el: 'Αδειες Αλλαγής χρήσης, Αδειες εργασιών Μικρής κλίμακας, Αναθεωρήσεις αδειών',
-                    en: 'Change of use permits, Small-scale work permits, Permit revisions'
-                  },
-                  {
-                    el: 'Εκδοση αναλυτικού προυπολογισμού, Πινακες 1 κλπ, Πίνακες ικα',
-                    en: 'Detailed budget issuance, Tables 1 etc., IKA tables'
-                  },
-                  {
-                    el: 'Φάκελος Αδ. Λειτουργίας καταστημάτων, Γνωστοποίηση με πλήρη αρχείο',
-                    en: 'Store operation license file, Notification with complete archive'
-                  },
-                  {
-                    el: 'Αδειες λειτουργίας καταστημάτων, ΚΥΕ, Βιοτεχνιών, Φροντιστηρίων',
-                    en: 'Operating licenses for stores, Food Service, Industries, Tutorial Schools'
-                  },
-                  {
-                    el: 'Διαγράμματα Ροής, έλεγχος επάρκειας Πυροπροστασίας, Παθητική πυρ/σια',
-                    en: 'Flow diagrams, Fire protection adequacy check, Passive fire protection'
-                  },
-                  {
-                    el: 'Πιστοποιημένη Εκτιμήτρια ακινήτων υπ. Οικονομικών, REV',
-                    en: 'Certified Real Estate Appraiser Ministry of Finance, REV'
-                  },
-                  {
-                    el: 'Συμβουλευτικές υπηρεσίες σε θέματα ακινήτων, φορολόγησης ιδιοκτησίας, κληρονομιάς',
-                    en: 'Consulting services on real estate, property taxation, inheritance'
-                  },
-                  {
-                    el: 'Εσωτερική διακόσμηση, (φωτορεαλισμός)',
-                    en: 'Interior decoration (photorealism)'
-                  },
-                  {
-                    el: 'Μελέτη περιβάλλοντος χώρου',
-                    en: 'Environmental space study'
-                  },
-                  {
-                    el: 'Ενεργειακός επιθεωρητής',
-                    en: 'Energy Inspector'
-                  },
-                  {
-                    el: 'Ελεγκτής Προσβασιμότητας',
-                    en: 'Accessibility Inspector'
-                  },
-                  {
-                    el: 'Ελεγκτής Δόμησης',
-                    en: 'Building Inspector'
-                  },
-                  {
-                    el: 'Σύνταξη & Υποβολή επενδυτικών προγραμμάτων ΕΣΠΑ',
-                    en: 'Preparation & Submission of ESPA investment programs'
-                  }
-                ].map((item, index) => (
-                  <motion.li
+              </div>
+              <ul className="space-y-3">
+                {architecturalServices.map((service, index) => (
+                  <motion.li 
                     key={index}
+                    className="flex items-start space-x-3 text-gray-700"
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-start space-x-3"
                   >
-                    <CheckCircle2 className="h-6 w-6 text-blue-500 flex-shrink-0 mt-1" />
-                    <span className="text-gray-700">{language === 'el' ? item.el : item.en}</span>
+                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
+                    <span>{service[language]}</span>
                   </motion.li>
                 ))}
               </ul>
             </motion.div>
           </div>
-
-          {/* CTA Button */}
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              {language === 'el' ? 'Επικοινωνήστε μαζί μας' : 'Contact Us'}
-              <ArrowRight className="w-5 h-5" />
-=======
-const slides = {
-  el: [
-    {
-      title: 'Αρχιτεκτονικές λύσεις - Διακόσμηση χώρων',
-      description: 'Αδειοδοτήσεις, Καταστημάτων, Καταλυμάτων, Επιχειρήσεων',
-      buttonText: 'Επισκόπηση',
-      buttonLink: '/interior-design',
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop'
-    },
-    {
-      title: 'Χτίζουμε το Μέλλον, Σχεδιάζουμε τα Όνειρά σας',
-      description: 'Καινοτόμες αρχιτεκτονικές λύσεις και άριστη κατασκευαστική ποιότητα για κάθε έργο',
-      buttonText: 'Ανακαλύψτε τα κατασκευαστικά μας έργα',
-      buttonLink: '/blog',
-      image: t2
-    },
-    {
-      title: 'Δηλώσεις - Βεβαιώσεις αυθαίρετων',
-      description: 'Αρχιτεκτονικός σχεδιασμός, Έκδοση αδειών, Επαγγελματικών χώρων, Τουριστικών καταλυμάτων, Επιχειρήσεων',
-      buttonText: 'Δείτε τις αρχιτεκτονικές μας λύσεις',
-      buttonLink: '/portfolio',
-      image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop'
-    }
-  ],
-  en: [
-    {
-      title: 'Architectural Solutions - Interior Design',
-      description: 'Licensing, Stores, Accommodations, Businesses',
-      buttonText: 'Overview',
-      buttonLink: '/interior-design',
-      image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop'
-    },
-    {
-      title: 'Building the Future, Designing Your Dreams',
-      description: 'Innovative architectural solutions and excellent construction quality for every project',
-      buttonText: 'Discover our construction projects',
-      buttonLink: '/blog',
-      image: t2
-    },
-    {
-      title: 'Arbitrary Building Declarations - Certifications',
-      description: 'Architectural design, Licensing, Commercial spaces, Tourist accommodations, Business premises',
-      buttonText: 'View our architectural solutions',
-      buttonLink: '/portfolio',
-      image: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop'
-    }
-  ]
-};
-
-const Home = () => {
-  const { t } = useTranslation();
-  const { language } = useLanguage();
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    // Ορισμός title και meta description για SEO
-    document.title = language === 'el' 
-      ? 'IN-MAVRIDIS | Αρχιτεκτονικό Γραφείο & Τεχνικές Υπηρεσίες στην Κομοτηνή'
-      : 'IN-MAVRIDIS | Architectural Office & Technical Services in Komotini';
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', language === 'el'
-        ? 'Το γραφείο IN-MAVRIDIS προσφέρει ολοκληρωμένες αρχιτεκτονικές και τεχνικές υπηρεσίες στην Κομοτηνή. Αρχιτεκτονικές μελέτες, κατασκευές, ανακαινίσεις, ενεργειακές επιθεωρήσεις και εκτιμήσεις ακινήτων.'
-        : 'IN-MAVRIDIS office offers comprehensive architectural and technical services in Komotini, Greece. Architectural studies, construction, renovations, energy inspections and real estate valuations.'
-      );
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = language === 'el'
-        ? 'Το γραφείο IN-MAVRIDIS προσφέρει ολοκληρωμένες αρχιτεκτονικές και τεχνικές υπηρεσίες στην Κομοτηνή. Αρχιτεκτονικές μελέτες, κατασκευές, ανακαινίσεις, ενεργειακές επιθεωρήσεις και εκτιμήσεις ακινήτων.'
-        : 'IN-MAVRIDIS office offers comprehensive architectural and technical services in Komotini, Greece. Architectural studies, construction, renovations, energy inspections and real estate valuations.';
-      document.head.appendChild(meta);
-    }
-
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => {
-        const next = prev + 1;
-        return next >= slides[language].length ? 0 : next;
-      });
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [language]);
-
-  const services = [
-    {
-      icon: Building2,
-      title: t('home.services.architectural.title'),
-      description: t('home.services.architectural.description'),
-      link: '/architectural-office'
-    },
-    {
-      icon: Building,
-      title: t('home.services.engineering.title'),
-      description: t('home.services.engineering.description'),
-      link: '/engineering-services'
-    },
-    {
-      icon: FileText,
-      title: language === 'el' ? 'Το Ιστολόγιο μας' : 'Our Blog',
-      description: language === 'el' 
-        ? 'Ανακαλύψτε τα τελευταία νέα, άρθρα και συμβουλές σχετικά με την αρχιτεκτονική και τις κατασκευές. Μείνετε ενημερωμένοι για τις τελευταίες τάσεις και εξελίξεις στον κλάδο.'
-        : 'Discover our latest news, articles and tips about architecture and construction. Stay updated with the latest trends and developments in the industry.',
-      link: '/blog',
-      buttonText: language === 'el' ? 'Μάθετε περισσότερα...' : 'Learn more...'
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  };
-
-  const popUpVariants = {
-    hidden: { scale: 0.5, opacity: 0 },
-    visible: { 
-      scale: 1, 
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 260,
-        damping: 20
-      }
-    }
-  };
-
-  const serviceCardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0.645, 0.045, 0.355, 1]
-      }
-    }
-  };
-
-  const cardContentVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: {
-        delay: 0.2,
-        duration: 0.4
-      }
-    }
-  };
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => {
-      const next = prev + 1;
-      return next >= slides[language].length ? 0 : next;
-    });
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => {
-      const next = prev - 1;
-      return next < 0 ? slides[language].length - 1 : next;
-    });
-  };
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="relative w-full h-[80vh] md:h-[90vh] bg-cover bg-center">
-        <div className="absolute inset-0">
-          <div className="relative h-full">
-            {slides[language].map((slide, index) => (
-              <motion.div
-                key={index}
-                className={`absolute inset-0 ${
-                  index === currentSlide ? 'opacity-100' : 'opacity-0'
-                } transition-opacity duration-1000 ease-in-out`}
-              >
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="max-w-7xl mx-auto px-4 md:px-12 text-center">
-                    <motion.h1
-                      className="text-3xl md:text-5xl font-bold text-white mb-4"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      {slide.title}
-                    </motion.h1>
-                    <motion.p
-                      className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.2 }}
-                    >
-                      {slide.description}
-                    </motion.p>
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.4 }}
-                    >
-                      <Link
-                        to={slide.buttonLink}
-                        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors text-base md:text-lg font-semibold z-10 relative"
-                      >
-                        {slide.buttonText}
-                      </Link>
-                    </motion.div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-
-            {/* Navigation Buttons */}
-            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-between px-4 md:px-8 pointer-events-none">
-              <button
-                onClick={prevSlide}
-                className="bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 md:p-3 rounded-full transform transition-transform hover:scale-110 focus:outline-none pointer-events-auto"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="bg-black bg-opacity-50 hover:bg-opacity-75 text-white p-2 md:p-3 rounded-full transform transition-transform hover:scale-110 focus:outline-none pointer-events-auto"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
-              </button>
-            </div>
-
-            {/* Slide Indicators */}
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10">
-              {slides[language].map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
-                    index === currentSlide ? 'bg-white' : 'bg-white bg-opacity-50'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Balkans Section */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.h2 
-            className="text-3xl font-bold text-center mb-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            {language === 'el' 
-              ? 'Γιατί αξίζει να ενδιαφερθείτε, ιδιαίτερα αν προέρχεστε από τα Βαλκάνια'
-              : 'Why you should be interested, especially if you come from the Balkans'}
-          </motion.h2>
-
-          <motion.div
-            className="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              {language === 'el' 
-                ? 'Ανακαλύψτε τις μοναδικές ευκαιρίες ανάπτυξης και επενδύσεων στη Θράκη. Με στρατηγική τοποθεσία, δίπλα σε Βουλγαρία και Τουρκία, και πρόσβαση σε ανερχόμενες τουριστικές αγορές, η περιοχή μας προσφέρει αμέτρητες δυνατότητες.'
-                : 'Discover unique development and investment opportunities in Thrace. With a strategic location next to Bulgaria and Turkey, and access to emerging tourist markets, our region offers countless possibilities.'}
-            </p>
-            <Link
-              to="/whyinterested"
-              className="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              {language === 'el' ? 'Μάθετε περισσότερα!' : 'Learn more!'}
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
-            </Link>
-          </motion.div>
-        </div>
-      </div>
-
-<<<<<<< HEAD
       {/* Selected Projects Section */}
       <div className="py-12 md:py-16 bg-gray-50">
-=======
-      {/* Construction Services Section */}
-      <div className="py-16 bg-gray-50">
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2 
             className="text-3xl font-bold text-center mb-12 gradient-text"
@@ -1410,7 +982,6 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
             {language === 'el' ? 'Επιλεγμένα Έργα' : 'Featured Projects'}
           </motion.h2>
 
@@ -1461,199 +1032,19 @@ const Home = () => {
                 </motion.div>
               );
             })}
-=======
-            {t('home.constructionServices.title')}
-          </motion.h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              {/* Work Plan Design */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <h3 className="text-2xl font-semibold mb-6">
-                  {t('home.constructionServices.planning.title')}
-                </h3>
-                <ul className="space-y-3">
-                  {(t('home.constructionServices.planning.items') as string[]).map((item, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <Ruler className="h-6 w-6 text-blue-500 flex-shrink-0 mt-1" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-
-              {/* Specialized Works */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                <h3 className="text-2xl font-semibold mb-6">
-                  {t('home.constructionServices.specialized.title')}
-                </h3>
-                <ul className="space-y-3">
-                  {(t('home.constructionServices.specialized.items') as string[]).map((item, index) => (
-                    <li key={index} className="flex items-start space-x-3">
-                      <Building2 className="h-6 w-6 text-blue-500 flex-shrink-0 mt-1" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            </div>
-
-            {/* Image Section */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative h-full min-h-[500px] rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
-                alt="Construction and Architecture"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    {t('home.constructionServices.construction.title')}
-                  </h3>
-                  <p className="text-gray-200 mb-4">
-                    {t('home.constructionServices.construction.description')}
-                  </p>
-                  <p className="text-gray-300 text-sm">
-                    {t('home.constructionServices.construction.quality')}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Services Section */}
       <div className="py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2 
             className="text-3xl font-bold text-center mb-12 gradient-text"
-=======
-      {/* Text Section above Services */}
-      <div className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              {language === 'el' ? 'Ολοκληρωμένες Αρχιτεκτονικές & Κατασκευαστικές Υπηρεσίες' : 'Comprehensive Architectural & Construction Services'}
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              {language === 'el' 
-                ? 'Το αρχιτεκτονικό και κατασκευαστικό μας γραφείο προσφέρει ολοκληρωμένες λύσεις για κάθε έργο, από τη σύλληψη της ιδέας έως την ολοκλήρωση της κατασκευής. Απευθυνόμαστε σε ιδιώτες και επιχειρήσεις που επιθυμούν να διαχειριστούν το ιδιοκτησιακό τους καθεστώς, να χτίσουν σε αστικά ή παραθαλάσσια οικόπεδα και να υλοποιήσουν το όραμά τους με απόλυτη συνέπεια και επαγγελματισμό.'
-                : 'Our architectural and construction office offers comprehensive solutions for every project, from concept to completion. We serve individuals and businesses looking to manage their property status, build in urban or seaside plots, and realize their vision with absolute consistency and professionalism.'
-              }
-            </p>
-
-            {/* Το κουμπί */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-            >
-              <Link 
-                to="/blog"
-                className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-lg 
-                         text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 
-                         hover:scale-105 inline-flex items-center space-x-2"
-              >
-                <span>
-                  {language === 'el' 
-                    ? 'Επισκόπηση της δουλειάς μας'
-                    : 'Overview of our work'
-                  }
-                </span>
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-5 w-5" 
-                  viewBox="0 0 20 20" 
-                  fill="currentColor"
-                >
-                  <path 
-                    fillRule="evenodd" 
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" 
-                    clipRule="evenodd" 
-                  />
-                </svg>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Services Section */}
-      <div className="py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
-          >
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={serviceCardVariants}
-                className="relative bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="p-6">
-                  <service.icon className="h-12 w-12 text-blue-600 mb-4" />
-                  <motion.div variants={cardContentVariants}>
-                    <h3 className="text-xl md:text-2xl font-semibold mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 text-sm md:text-base">
-                      {service.description}
-                    </p>
-                    <Link
-                      to={service.link}
-                      className="inline-block text-blue-600 hover:text-blue-700 font-medium group relative"
-                    >
-                      <span className="flex items-center">
-                        {service.buttonText || (language === 'el' ? 'Μάθετε περισσότερα...' : 'Learn more...')}
-                      </span>
-                    </Link>
-                  </motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Why Choose Us Section */}
-      <div className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.h2 
-            className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 gradient-text"
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
             {language === 'el' ? 'Οι Υπηρεσίες μας' : 'Our Services'}
           </motion.h2>
 
@@ -1740,50 +1131,19 @@ const Home = () => {
                 <ArrowRight className="h-4 w-4 ml-1" />
               </Link>
             </motion.div>
-=======
-            {t('home.whyChooseUs.title')}
-          </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {(t('home.whyChooseUs.features') as FeatureItem[]).map((feature, index) => (
-              <motion.div
-                key={index}
-                className="bg-white p-4 md:p-6 rounded-lg shadow-lg hover-card"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <h3 className="text-lg md:text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{feature.description}</p>
-              </motion.div>
-            ))}
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
           </div>
         </div>
       </div>
 
       {/* Certifications Section */}
-<<<<<<< HEAD
       <div className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-600"
-=======
-      <div className="bg-white py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
-            {t('home.certifications.title')}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {/* Left Column */}
-            <motion.div
-              className="bg-gray-50 p-4 md:p-8 rounded-lg overflow-x-auto"
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
             {language === 'el' ? 'Πιστοποιήσεις' : 'Certifications'}
           </motion.h2>
 
@@ -1819,19 +1179,10 @@ const Home = () => {
                       dangerouslySetInnerHTML={{ __html: cert }}
                     />
                   </motion.li>
-=======
-              <ul className="space-y-3 min-w-[300px]">
-                {certifications[language].column1.map((cert, index) => (
-                  <li key={index} className="flex items-start text-sm md:text-base">
-                    <span className="text-blue-600 mr-2 flex-shrink-0">•</span>
-                    <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: cert }}></span>
-                  </li>
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
                 ))}
               </ul>
             </motion.div>
 
-<<<<<<< HEAD
             {/* Professional Memberships Card */}
             <motion.div
               className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300 border border-gray-100"
@@ -1863,26 +1214,10 @@ const Home = () => {
                       dangerouslySetInnerHTML={{ __html: cert }}
                     />
                   </motion.li>
-=======
-            {/* Right Column */}
-            <motion.div
-              className="bg-gray-50 p-4 md:p-8 rounded-lg overflow-x-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <ul className="space-y-3 min-w-[300px]">
-                {certifications[language].column2.map((cert, index) => (
-                  <li key={index} className="flex items-start text-sm md:text-base">
-                    <span className="text-blue-600 mr-2 flex-shrink-0">•</span>
-                    <span className="text-gray-700" dangerouslySetInnerHTML={{ __html: cert }}></span>
-                  </li>
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
                 ))}
               </ul>
             </motion.div>
           </div>
-<<<<<<< HEAD
 
           {/* CTA Button */}
           <motion.div 
@@ -1899,8 +1234,6 @@ const Home = () => {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
-=======
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
         </div>
       </div>
     </div>

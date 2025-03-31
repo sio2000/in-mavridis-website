@@ -53,11 +53,7 @@ const Contact = () => {
 
   const contactInfo = {
     phones: ['+30 2531034781', '+30 6977 717410', '+30 6976 999811'],
-<<<<<<< HEAD
     email: ['ymavridis@gmail.com', 'niki_mavridou@yahoo.gr'],
-=======
-    email: ['info@in-mavridis.gr', 'niki_mavridou@yahoo.gr'],
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     address: {
       el: 'Θάσου 1, Κομοτηνή, 69100',
       en: '1 Thasou, Komotini, 69100'
@@ -77,13 +73,8 @@ const Contact = () => {
   };
 
   const officeLocation = {
-<<<<<<< HEAD
     lat: 41.115338081967046,
     lng: 25.405340183654182,
-=======
-    lat: 41.1171,
-    lng: 25.4048,
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     address: contactInfo.address
   };
 
@@ -92,11 +83,7 @@ const Contact = () => {
       name: 'Facebook',
       icon: Facebook,
       url: 'https://www.facebook.com/mavridiskomotini',
-<<<<<<< HEAD
       color: 'bg-[#1877f2] hover:bg-[#0d6efd]'
-=======
-      color: 'bg-[#1877F2] hover:bg-[#0d6efd]'
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
     },
     {
       name: 'Instagram',
@@ -105,15 +92,12 @@ const Contact = () => {
       color: 'bg-[#E4405F] hover:bg-[#d62e4c]'
     },
     {
-<<<<<<< HEAD
       name: 'LinkedIn',
       icon: Linkedin,
       url: 'https://www.linkedin.com/in/ioannis-mavridis-9689843a/',
       color: 'bg-[#0A66C2] hover:bg-[#004182]'
     },
     {
-=======
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
       name: 'TikTok',
       icon: ({ className }: { className?: string }) => (
         <svg 
@@ -274,7 +258,6 @@ const Contact = () => {
               </motion.div>
 
               {/* Social Media Links */}
-<<<<<<< HEAD
               <div className="flex flex-wrap gap-4">
                 <motion.a
                   href="https://www.facebook.com/mavridiskomotini"
@@ -301,10 +284,6 @@ const Contact = () => {
                 </motion.a>
 
                 {socialMedia.slice(1).map((platform) => (
-=======
-              <div className="mt-8 flex justify-center space-x-6">
-                {socialMedia.map((platform) => (
->>>>>>> 10c52ec (ρώτο ανέβασμα αρχείου στο GitHub)
                   <motion.a
                     key={platform.name}
                     href={platform.url}
