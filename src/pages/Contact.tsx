@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { useTranslation } from '../hooks/useTranslation';
 import 'leaflet/dist/leaflet.css';
+import { FaLinkedin } from 'react-icons/fa';
 
 // Διορθώνουμε το πρόβλημα με τα εικονίδια του Leaflet
 import icon from 'leaflet/dist/images/marker-icon.png';
@@ -90,12 +91,6 @@ const Contact = () => {
       icon: Instagram,
       url: 'https://www.instagram.com/mavridis_architecture_engineer/',
       color: 'bg-[#E4405F] hover:bg-[#d62e4c]'
-    },
-    {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      url: 'https://www.linkedin.com/in/ioannis-mavridis-9689843a/',
-      color: 'bg-[#0A66C2] hover:bg-[#004182]'
     },
     {
       name: 'TikTok',
@@ -300,6 +295,30 @@ const Contact = () => {
                     )}
                   </motion.a>
                 ))}
+              </div>
+
+              <div className="flex items-center space-x-4">
+                <FaLinkedin className="text-2xl text-blue-600" />
+                <a 
+                  href="https://www.linkedin.com/in/ioannis-mavridis-9689843a/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  Ioannis Mavridis
+                </a>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <FaLinkedin className="text-2xl text-purple-600" />
+                <a 
+                  href="https://www.linkedin.com/in/niki-mavridou-rev-0990053b/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-600 hover:text-purple-800"
+                >
+                  Niki Mavridou
+                </a>
               </div>
             </div>
           </motion.div>

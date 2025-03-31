@@ -80,6 +80,83 @@ import rt4 from '../assets/images/rt4.jpg';
 import rt5 from '../assets/images/rt5.jpg';
 import rt6 from '../assets/images/rt6.jpg';
 import rt7 from '../assets/images/rt7.jpg';
+import renovation_second_detached_house1 from '../assets/images/Renovation_of_Second_detached_house_in_the_center.jpg';
+import renovation_second_detached_house2 from '../assets/images/Renovation_of_Second_detached_house_in_the_center2.jpg';
+import renovation_second_detached_house3 from '../assets/images/Renovation_of_Second_detached_house_in_the_center3.jpg';
+import renovation_second_detached_house4 from '../assets/images/Renovation_of_Second_detached_house_in_the_center4.jpg';
+import renovation_second_detached_house5 from '../assets/images/Renovation_of_Second_detached_house_in_the_center5.jpg';
+import construction_detached_house1 from '../assets/images/Construction_detached_house_construction_progress.jpg';
+import construction_detached_house2 from '../assets/images/Construction_detached_house_construction_progress2.jpg';
+import construction_detached_house3 from '../assets/images/Construction_detached_house_construction_progress3.jpg';
+import construction_detached_house4 from '../assets/images/Construction_detached_house_construction_progress4.jpg';
+import construction_detached_house5 from '../assets/images/Construction_detached_house_construction_progress5.jpg';
+import construction_detached_house6 from '../assets/images/Construction_detached_house_construction_progress6.jpg';
+import construction_detached_house7 from '../assets/images/Construction_detached_house_construction_progress7.jpg';
+import construction_detached_house8 from '../assets/images/Construction_detached_house_construction_progress8.jpg';
+import construction_house_komotini1 from '../assets/images/construction_house_Komotini.jpg';
+import construction_house_komotini2 from '../assets/images/construction_house_Komotini2.jpg';
+import construction_house_komotini3 from '../assets/images/construction_house_Komotini3.jpg';
+import construction_house_komotini4 from '../assets/images/construction_house_Komotini4.jpg';
+import summer_residence_complex1 from '../assets/images/Summer_residence_complex.jpg';
+import summer_residence_complex2 from '../assets/images/Summer_residence_complex2.jpg';
+import summer_residence_complex3 from '../assets/images/Summer_residence_complex3.jpg';
+import summer_residence_complex4 from '../assets/images/Summer_residence_complex4.jpg';
+import summer_residence_complex5 from '../assets/images/Summer_residence_complex5.jpg';
+import summer_residence_complex6 from '../assets/images/Summer_residence_complex6.jpg';
+import height_increase_komotini from '../assets/images/Height_increase_Komotini.jpg';
+import construction_of_detached_house1 from '../assets/images/construction_of_a_detached_house.jpg';
+import construction_of_detached_house2 from '../assets/images/construction_of_a_detached_house2.jpg';
+import construction_of_detached_house3 from '../assets/images/construction_of_a_detached_house3.jpg';
+import construction_of_private_projects1 from '../assets/images/Construction_of_Private_Projects.jpg';
+import construction_of_private_projects2 from '../assets/images/Construction_of_Private_Projects2.jpg';
+import construction_of_private_projects3 from '../assets/images/Construction_of_Private_Projects3.jpg';
+import construction_of_private_projects4 from '../assets/images/Construction_of_Private_Projects4.jpg';
+import mikel_ikea1 from '../assets/images/mikel-ikea.jpg';
+import mikel_ikea2 from '../assets/images/mikel-ikea2.jpg';
+import mikel_ikea3 from '../assets/images/mikel-ikea3.jpg';
+import mikel_ikea4 from '../assets/images/mikel-ikea4.jpg';
+import holiday_ground_floor_residences from '../assets/images/holiday_ground_floor_residences.jpg';
+import damages_causes_restorations1 from '../assets/images/damages_causes_restorations.jpg';
+import damages_causes_restorations2 from '../assets/images/damages_causes_restorations2.jpg';
+import damages_causes_restorations3 from '../assets/images/damages_causes_restorations3.jpg';
+import damages_causes_restorations4 from '../assets/images/damages_causes_restorations4.jpg';
+import damages_causes_restorations5 from '../assets/images/damages_causes_restorations5.jpg';
+import damages_causes_restorations6 from '../assets/images/damages_causes_restorations6.jpg';
+import damages_causes_restorations7 from '../assets/images/damages_causes_restorations7.jpg';
+import construction_in_progress from '../assets/images/Construction_in_progress.jpg';
+import corner_plot_urban_house1 from '../assets/images/Corner_plot_urban_house.jpg';
+import corner_plot_urban_house2 from '../assets/images/Corner_plot_urban_house2.jpg';
+import new_business_space1 from '../assets/images/New_business_space.jpg';
+import new_business_space2 from '../assets/images/New_business_space2.jpg';
+import new_business_space3 from '../assets/images/New_business_space3.jpg';
+import construction_progress from '../assets/images/Construction_progress.jpg';
+import inside_construction1 from '../assets/images/inside_construction.jpg';
+import inside_construction2 from '../assets/images/inside_construction2.jpg';
+import construction_site_management1 from '../assets/images/Construction_site_management.jpg';
+import construction_site_management2 from '../assets/images/Construction_site_management2.jpg';
+import construction_site_management3 from '../assets/images/Construction_site_management3.jpg';
+import construction_site_management4 from '../assets/images/Construction_site_management4.jpg';
+import construction_site_management5 from '../assets/images/Construction_site_management5.jpg';
+import construction_site_management6 from '../assets/images/Construction_site_management6.jpg';
+import construction_site_management7 from '../assets/images/Construction_site_management7.jpg';
+import construction_site_management8 from '../assets/images/Construction_site_management8.jpg';
+import construction_site_management9 from '../assets/images/Construction_site_management9.jpg';
+import older_projects1 from '../assets/images/Older_projects.jpg';
+import older_projects2 from '../assets/images/Older_projects2.jpg';
+import older_projects3 from '../assets/images/Older_projects3.jpg';
+import older_projects4 from '../assets/images/Older_projects4.jpg';
+import structure_repair_eval1 from '../assets/images/structure_repair_evaluation.jpg';
+import structure_repair_eval2 from '../assets/images/structure_repair_evaluation2.jpg';
+import structure_repair_eval3 from '../assets/images/structure_repair_evaluation3.jpg';
+import structure_repair_eval4 from '../assets/images/structure_repair_evaluation4.jpg';
+import structure_repair_eval5 from '../assets/images/structure_repair_evaluation5.jpg';
+import structure_repair_eval6 from '../assets/images/structure_repair_evaluation6.jpg';
+import structure_repair_eval7 from '../assets/images/structure_repair_evaluation7.jpg';
+import house_maroneia1 from '../assets/images/houseMaroneia.jpg';
+import house_maroneia2 from '../assets/images/houseMaroneia2.jpg';
+import house_maroneia3 from '../assets/images/houseMaroneia3.jpg';
+import house_maroneia4 from '../assets/images/houseMaroneia4.jpg';
+import house_maroneia5 from '../assets/images/houseMaroneia5.jpg';
 
 export type Category = 'all' | 'construction' | 'interior' | 'residential' | 'suburban';
 
@@ -108,7 +185,7 @@ export const projects: Project[] = [
       el: 'Green Policy – Low Energy Consumption Building',
       en: 'Green Policy – Low Energy Consumption Building'
     },
-    category: ['construction', 'residential'],
+    category: ['residential'],
     images: [
       build1,
       build2,
@@ -142,7 +219,7 @@ The project includes:
       el: 'Five-storey building with shops on the ground floor',
       en: 'Five-storey building with shops on the ground floor'
     },
-    category: ['construction', 'residential'],
+    category: ['residential'],
     images: [
       dis1,
       dis2,
@@ -528,7 +605,7 @@ The project includes:
       el: 'Multilevel suburban house',
       en: 'Multilevel suburban house'
     },
-    category: ['construction', 'suburban', 'interior'],
+    category: ['suburban', 'interior'],
     images: [
       house1,
       house2,
@@ -562,6 +639,391 @@ The project includes:
 • Energy efficient systems
 • Smart home installations
 • Interior design implementation`
+    }
+  },
+  {
+    id: 23,
+    title: {
+      el: "Aνάπλαση μονοκατοικίας στο κέντρο",
+      en: "Renovation of detached house in the center"
+    },
+    category: "construction",
+    images: [
+      renovation_second_detached_house1,
+      renovation_second_detached_house2,
+      renovation_second_detached_house3,
+      renovation_second_detached_house4,
+      renovation_second_detached_house5
+    ],
+    description: {
+      el: "Ανακαίνιση και αναδιαμόρφωση μονοκατοικίας στο κέντρο",
+      en: "Renovation and remodeling of detached house in the center"
+    },
+    detailedDescription: {
+      el: "Ανακαίνιση και αναδιαμόρφωση μονοκατοικίας στο κέντρο",
+      en: "Renovation and remodeling of detached house in the center"
+    }
+  },
+  {
+    id: 24,
+    title: {
+      el: "Construction of a detached house",
+      en: "Construction of a detached house"
+    },
+    category: "construction",
+    images: [
+      construction_detached_house1,
+      construction_detached_house2,
+      construction_detached_house3,
+      construction_detached_house4,
+      construction_detached_house5,
+      construction_detached_house6,
+      construction_detached_house7,
+      construction_detached_house8
+    ],
+    description: {
+      el: "Εξέλιξη κατασκευής- επιχρίσματα, εργασίες αποπεράτωσης",
+      en: "Construction progress - plastering, completion works"
+    },
+    detailedDescription: {
+      el: "Εξέλιξη κατασκευής- επιχρίσματα, εργασίες αποπεράτωσης",
+      en: "Construction progress - plastering, completion works"
+    }
+  },
+  {
+    id: 25,
+    title: {
+      el: "Ανέγερση Μονοκατοικίας στην Κομοτηνή",
+      en: "Construction of House in Komotini"
+    },
+    category: "construction",
+    images: [
+      construction_house_komotini1,
+      construction_house_komotini2,
+      construction_house_komotini3,
+      construction_house_komotini4
+    ],
+    description: {
+      el: "Εξέλιξη κατασκευής- αποπεράτωση πλακών σκυροδέματος",
+      en: "Construction progress - completion of concrete slabs"
+    },
+    detailedDescription: {
+      el: "Εξέλιξη κατασκευής- αποπεράτωση πλακών σκυροδέματος",
+      en: "Construction progress - completion of concrete slabs"
+    }
+  },
+  {
+    id: 26,
+    title: {
+      el: "Συγκρότημα Θερινών Κατοικιών Πλατανίτης",
+      en: "Summer Residence Complex Platanitis"
+    },
+    category: "construction",
+    images: [
+      summer_residence_complex1,
+      summer_residence_complex2,
+      summer_residence_complex3,
+      summer_residence_complex4,
+      summer_residence_complex5,
+      summer_residence_complex6
+    ],
+    description: {
+      el: "Επένδυση στην παραλιακή ζώνη της Μαρώνειας",
+      en: "Investment in the coastal zone of Maronia"
+    },
+    detailedDescription: {
+      el: "Επένδυση στην παραλιακή ζώνη της Μαρώνειας",
+      en: "Investment in the coastal zone of Maronia"
+    }
+  },
+  {
+    id: 27,
+    title: {
+      el: "Προσθήκη καθ' ύψος στην Κομοτηνή",
+      en: "Height Addition in Komotini"
+    },
+    category: "construction",
+    images: [height_increase_komotini],
+    description: {
+      el: "Προετοιμασία εργασιών: Υδροβολή, Απόξεση, κλπ",
+      en: "Work preparation: Hydroblasting, Scraping, etc"
+    },
+    detailedDescription: {
+      el: "Προετοιμασία εργασιών: Υδροβολή, Απόξεση, κλπ",
+      en: "Work preparation: Hydroblasting, Scraping, etc"
+    }
+  },
+  {
+    id: 28,
+    title: {
+      el: "Ανέγερση Μονοκατοικίας στην Κομοτηνή",
+      en: "Construction of House in Komotini"
+    },
+    category: "construction",
+    images: [
+      construction_of_detached_house1,
+      construction_of_detached_house2,
+      construction_of_detached_house3
+    ],
+    description: {
+      el: "Εξέλιξη κατασκευής- επιχρίσματα",
+      en: "Construction progress - plastering"
+    },
+    detailedDescription: {
+      el: "Εξέλιξη κατασκευής- επιχρίσματα",
+      en: "Construction progress - plastering"
+    }
+  },
+  {
+    id: 29,
+    title: {
+      el: "Κατασκευή Ιδιωτικών Έργων",
+      en: "Construction of Private Projects"
+    },
+    category: "construction",
+    images: [
+      construction_of_private_projects1,
+      construction_of_private_projects2,
+      construction_of_private_projects3,
+      construction_of_private_projects4
+    ],
+    description: {
+      el: "Ανακαινίσεις, Μονώσεις ταρατσών - εξωστών - υπογείων",
+      en: "Renovations, Waterproofing of terraces - balconies - basements"
+    },
+    detailedDescription: {
+      el: "Ανακαινίσεις, Μονώσεις ταρατσών - εξωστών - υπογείων",
+      en: "Renovations, Waterproofing of terraces - balconies - basements"
+    }
+  },
+  {
+    id: 30,
+    title: {
+      el: "Mikel-IKEA Project",
+      en: "Mikel-IKEA Project"
+    },
+    category: "construction",
+    images: [
+      mikel_ikea1,
+      mikel_ikea2,
+      mikel_ikea3,
+      mikel_ikea4
+    ],
+    description: {
+      el: "Επαγγελματικός χώρος",
+      en: "Professional space"
+    },
+    detailedDescription: {
+      el: "Επαγγελματικός χώρος",
+      en: "Professional space"
+    }
+  },
+  {
+    id: 31,
+    title: {
+      el: "Παραθεριστικές Ισόγειες Κατοικίες",
+      en: "Holiday Ground Floor Residences"
+    },
+    category: "construction",
+    images: [holiday_ground_floor_residences],
+    description: {
+      el: "Τρεις όμοιες παραθεριστικές κατοικίες στον Προφήτη Ηλία",
+      en: "Three identical holiday homes in Profitis Ilias"
+    },
+    detailedDescription: {
+      el: "Τρεις όμοιες παραθεριστικές κατοικίες στον Προφήτη Ηλία",
+      en: "Three identical holiday homes in Profitis Ilias"
+    }
+  },
+  {
+    id: 32,
+    title: {
+      el: "Έρευνα Βλαβών και Αποκαταστάσεων",
+      en: "Damage Research and Restorations"
+    },
+    category: "construction",
+    images: [
+      damages_causes_restorations1,
+      damages_causes_restorations2,
+      damages_causes_restorations3,
+      damages_causes_restorations4,
+      damages_causes_restorations5,
+      damages_causes_restorations6,
+      damages_causes_restorations7
+    ],
+    description: {
+      el: "Μετρήσεις υγρασίας, Υλοποιήσεις αρχιτεκτονικών μελετών",
+      en: "Moisture measurements, Implementation of architectural studies"
+    },
+    detailedDescription: {
+      el: "Μετρήσεις υγρασίας, Υλοποιήσεις αρχιτεκτονικών μελετών",
+      en: "Moisture measurements, Implementation of architectural studies"
+    }
+  },
+  {
+    id: 33,
+    title: {
+      el: "Construction in Progress",
+      en: "Construction in Progress"
+    },
+    category: "construction",
+    images: [construction_in_progress],
+    description: {
+      el: "Ongoing construction project",
+      en: "Ongoing construction project"
+    },
+    detailedDescription: {
+      el: "Ongoing construction project",
+      en: "Ongoing construction project"
+    }
+  },
+  {
+    id: 34,
+    title: {
+      el: "Γωνιακό Οικόπεδο Αστικής Μονοκατοικίας",
+      en: "Corner Plot Urban House"
+    },
+    category: "construction",
+    images: [
+      corner_plot_urban_house1,
+      corner_plot_urban_house2
+    ],
+    description: {
+      el: "Περιοχή Εκτενεπόλ - Excavation days",
+      en: "Ektenepol Area - Excavation days"
+    },
+    detailedDescription: {
+      el: "Περιοχή Εκτενεπόλ - Excavation days",
+      en: "Ektenepol Area - Excavation days"
+    }
+  },
+  {
+    id: 35,
+    title: {
+      el: "Νέος Επαγγελματικός Χώρος",
+      en: "New Business Space"
+    },
+    category: "interior",
+    images: [
+      new_business_space1,
+      new_business_space2,
+      new_business_space3
+    ],
+    description: {
+      el: "Αρχιτεκτονικός σχεδιασμός και υλοποίηση",
+      en: "Architectural design and implementation"
+    },
+    detailedDescription: {
+      el: "Αρχιτεκτονικός σχεδιασμός και υλοποίηση",
+      en: "Architectural design and implementation"
+    }
+  },
+  {
+    id: 36,
+    title: {
+      el: "Κατασκευή σε Εξέλιξη",
+      en: "Construction in Progress"
+    },
+    category: "construction",
+    images: [construction_progress],
+    description: {
+      el: "Construction in progress",
+      en: "Construction in progress"
+    },
+    detailedDescription: {
+      el: "Construction in progress",
+      en: "Construction in progress"
+    }
+  },
+  {
+    id: 37,
+    title: {
+      el: "In Progress, Κομοτηνή",
+      en: "In Progress, Komotini"
+    },
+    category: "construction",
+    images: [
+      inside_construction1,
+      inside_construction2
+    ],
+    description: {
+      el: "Εσωτερικές εργασίες",
+      en: "Interior works"
+    },
+    detailedDescription: {
+      el: "Εσωτερικές εργασίες",
+      en: "Interior works"
+    }
+  },
+  
+  {
+    id: 40,
+    title: {
+      el: "Παλαιότερα Έργα",
+      en: "Older Projects"
+    },
+    category: "construction",
+    images: [
+      older_projects1,
+      older_projects2,
+      older_projects3,
+      older_projects4
+    ],
+    description: {
+      el: "Παλαιότερα έργα στην Κομοτηνή",
+      en: "Past projects in Komotini"
+    },
+    detailedDescription: {
+      el: "Παλαιότερα έργα στην Κομοτηνή",
+      en: "Past projects in Komotini"
+    }
+  },
+  {
+    id: 41,
+    title: {
+      el: "Κατασκευή Ιδιωτικών Έργων",
+      en: "Construction of Private Projects"
+    },
+    category: "construction",
+    images: [
+      structure_repair_eval1,
+      structure_repair_eval2,
+      structure_repair_eval3,
+      structure_repair_eval4,
+      structure_repair_eval5,
+      structure_repair_eval6,
+      structure_repair_eval7
+    ],
+    description: {
+      el: "Ανακαινίσεις, Μονώσεις ταρατσών - εξωστών - υπογείων",
+      en: "Renovations, Waterproofing of terraces - balconies - basements"
+    },
+    detailedDescription: {
+      el: "Ανακαινίσεις, Μονώσεις ταρατσών - εξωστών - υπογείων",
+      en: "Renovations, Waterproofing of terraces - balconies - basements"
+    }
+  },
+  {
+    id: 42,
+    title: {
+      el: "Κατασκευή Ιδιωτικών Έργων",
+      en: "Construction of Private Projects"
+    },
+    category: "construction",
+    images: [
+      house_maroneia1,
+      house_maroneia2,
+      house_maroneia3,
+      house_maroneia4,
+      house_maroneia5
+    ],
+    description: {
+      el: "Ανακαινίσεις, Μονώσεις ταρατσών - εξωστών - υπογείων",
+      en: "Renovations, Waterproofing of terraces - balconies - basements"
+    },
+    detailedDescription: {
+      el: "Ανακαινίσεις, Μονώσεις ταρατσών - εξωστών - υπογείων",
+      en: "Renovations, Waterproofing of terraces - balconies - basements"
     }
   }
 ];

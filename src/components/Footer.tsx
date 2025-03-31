@@ -3,6 +3,7 @@ import { Building2, Phone, Mail, MapPin, Facebook, Instagram, Clock, Linkedin } 
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 import { Link } from 'react-router-dom';
+import { FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -45,10 +46,16 @@ const Footer = () => {
       color: 'bg-[#E4405F] hover:bg-[#d62e4c]'
     },
     {
-      name: 'LinkedIn',
-      icon: Linkedin,
+      name: 'LinkedIn Ioannis',
+      icon: FaLinkedin,
       url: 'https://www.linkedin.com/in/ioannis-mavridis-9689843a/',
       color: 'bg-[#0A66C2] hover:bg-[#004182]'
+    },
+    {
+      name: 'LinkedIn Niki',
+      icon: FaLinkedin,
+      url: 'https://www.linkedin.com/in/niki-mavridou-rev-0990053b/',
+      color: 'bg-[#9333EA] hover:bg-[#7E22CE]'
     },
     {
       name: 'TikTok',

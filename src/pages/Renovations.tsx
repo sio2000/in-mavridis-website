@@ -9,6 +9,18 @@ import con2 from '../assets/images/con2.jpg';
 import con3 from '../assets/images/con3.jpg';
 import con4 from '../assets/images/con4.jpg';
 import brush from '../assets/images/brush.jpg';
+import Construction_site_management from '../assets/images/Construction_site_management.jpg';
+import Construction_site_management2 from '../assets/images/Construction_site_management2.jpg';
+import VelvetSkins12 from '../assets/images/VelvetSkins12.jpg';
+import VelvetSkins16 from '../assets/images/VelvetSkins16.jpg';
+import renovation_image_1 from '../assets/images/business_residential_renovation10.jpg';
+import renovation_image_2 from '../assets/images/Renovation_of_a_detached_house_in_the_center3.jpg';
+import renovation_image_3 from '../assets/images/store_in_a_shopping_center2.jpg';
+import renovation_image_4 from '../assets/images/Renovation_of_Second_detached_house_in_the_center4.jpg';
+import renovation_image_5 from '../assets/images/store_in_a_shopping_center6.jpg';
+import renovation_image_6 from '../assets/images/inside_construction2.jpg';
+import renovation_image_7 from '../assets/images/mikel5.png';
+import renovation_image_8 from '../assets/images/a2.jpg';
 
 const Renovations = () => {
   const { language } = useLanguage();
@@ -28,6 +40,93 @@ const Renovations = () => {
     setIsOpen(false);
     setSelectedImage(null);
   };
+
+  const renovationImages = [
+    {
+      image: con1,
+      title: {
+        el: 'Ανακαίνιση Κατοικίας',
+        en: 'House Renovation'
+      }
+    },
+    {
+      image: con2,
+      title: {
+        el: 'Ανακαίνιση Μπάνιου',
+        en: 'Bathroom Renovation'
+      }
+    },
+    {
+      image: con3,
+      title: {
+        el: 'Ανακαίνιση Κουζίνας',
+        en: 'Kitchen Renovation'
+      }
+    },
+    {
+      image: con4,
+      title: {
+        el: 'Εσωτερική Ανακαίνιση',
+        en: 'Interior Renovation'
+      }
+    },
+    {
+      image: Construction_site_management2,
+      title: {
+        el: 'Ανακαίνιση Διαμερίσματος',
+        en: 'Apartment Renovation'
+      }
+    },
+    {
+      image: Construction_site_management,
+      title: {
+        el: 'Ανακαίνιση Χώρου',
+        en: 'Space Renovation'
+      }
+    },
+    {
+      image: VelvetSkins12,
+      title: {
+        el: 'Ολική Ανακαίνιση',
+        en: 'Complete Renovation'
+      }
+    },
+    {
+      image: VelvetSkins16,
+      title: {
+        el: 'Ανακαίνιση Καταστήματος',
+        en: 'Store Renovation'
+      }
+    },
+    {
+      image: renovation_image_1,
+      title: {
+        el: 'Ανακαίνιση Εξωτερικού Χώρου',
+        en: 'Exterior Renovation'
+      }
+    },
+    {
+      image: renovation_image_2,
+      title: {
+        el: 'Ανακαίνιση Γραφείου',
+        en: 'Office Renovation'
+      }
+    },
+    {
+      image: renovation_image_3,
+      title: {
+        el: 'Ανακαίνιση Επαγγελματικού Χώρου',
+        en: 'Commercial Space Renovation'
+      }
+    },
+    {
+      image: renovation_image_4,
+      title: {
+        el: 'Ανακαίνιση Βεράντας',
+        en: 'Terrace Renovation'
+      }
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 py-12">
@@ -74,10 +173,9 @@ const Renovations = () => {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <img src={con1} alt="Con 1" className="w-full h-48 object-cover rounded-lg cursor-pointer" onClick={() => openModal(con1)} />
-        <img src={con2} alt="Con 2" className="w-full h-48 object-cover rounded-lg cursor-pointer" onClick={() => openModal(con2)} />
-        <img src={con3} alt="Con 3" className="w-full h-48 object-cover rounded-lg cursor-pointer" onClick={() => openModal(con3)} />
-        <img src={con4} alt="Con 4" className="w-full h-48 object-cover rounded-lg cursor-pointer" onClick={() => openModal(con4)} />
+        {renovationImages.map((image, index) => (
+          <img key={index} src={image.image} alt={image.title.el} className="w-full h-48 object-cover rounded-lg cursor-pointer" onClick={() => openModal(image.image)} />
+        ))}
       </div>
 
       {isOpen && (

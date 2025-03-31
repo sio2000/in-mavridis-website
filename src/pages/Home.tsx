@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowRight, X, Building2, Ruler, Building, Award, CheckCircle2, Users, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, X, Building2, Ruler, Building, Award, CheckCircle2, Users, Phone, Mail, MapPin, Clock, Waves, Store } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import { useLanguage } from '../context/LanguageContext';
 import t1 from '../assets/images/t1.jpg';
@@ -212,6 +212,18 @@ import RenovationSecondDetachedHouseCenter2 from '../assets/images/Renovation_of
 import RenovationSecondDetachedHouseCenter3 from '../assets/images/Renovation_of_Second_detached_house_in_the_center3.jpg';
 import RenovationSecondDetachedHouseCenter4 from '../assets/images/Renovation_of_Second_detached_house_in_the_center4.jpg';
 import RenovationSecondDetachedHouseCenter5 from '../assets/images/Renovation_of_Second_detached_house_in_the_center5.jpg';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import plataniti from '../assets/images/plataniti.jpg';
+import plataniti2 from '../assets/images/plataniti2.jpg';
+import plataniti3 from '../assets/images/plataniti3.jpg';
+import plataniti4 from '../assets/images/plataniti4.jpg';
+import MaroniaRentalApartmentsResort from '../assets/images/maronia-rental-apartments-resort.jpg';
+import MaroniaRentalApartmentsResort2 from '../assets/images/maronia-rental-apartments-resort2.jpg';
+import MaroniaRentalApartmentsResort3 from '../assets/images/maronia-rental-apartments-resort3.jpg';
+import MaroniaRentalApartmentsResort4 from '../assets/images/maronia-rental-apartments-resort4.jpg';
+import MaroniaRentalApartmentsResort5 from '../assets/images/maronia-rental-apartments-resort5.jpg';
 
 type ProjectKey = `project${number}`;
 
@@ -220,7 +232,17 @@ interface CurrentSlides {
 }
 
 interface ProjectImages {
-  [key: ProjectKey]: string[];
+  [key: ProjectKey]: {
+    images: string[];
+    title: {
+      el: string;
+      en: string;
+    };
+    description: {
+      el: string;
+      en: string;
+    };
+  };
 }
 
 const certifications = {
@@ -266,8 +288,10 @@ const Home = () => {
   const { language } = useLanguage();
   const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [currentSlides, setCurrentSlides] = useState<CurrentSlides>({});
+  const [currentSlides, setCurrentSlides] = useState<{ [key: string]: number }>({});
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImages, setSelectedImages] = useState<string[]>([]);
 
   const handleImageClick = (image: string) => {
     setSelectedImage(image);
@@ -278,134 +302,441 @@ const Home = () => {
   };
 
   const projectImages: ProjectImages = {
-    project1: [RenovationDetachedHouseCenter1, RenovationDetachedHouseCenter2, RenovationDetachedHouseCenter3],
-    project2: [StoreShoppingCenter1, StoreShoppingCenter2, StoreShoppingCenter3, StoreShoppingCenter4, StoreShoppingCenter5, StoreShoppingCenter6, StoreShoppingCenter7, StoreShoppingCenter8, StoreShoppingCenter9],
-    project3: [RenovationSecondDetachedHouseCenter1, RenovationSecondDetachedHouseCenter2, RenovationSecondDetachedHouseCenter3, RenovationSecondDetachedHouseCenter4, RenovationSecondDetachedHouseCenter5],
-    project4: [lop, lop2],
-    project5: [ad, af, ag, ah, aj, ak, al, as1],
-    project6: [m, n, b, v, c, x, z],
-    project7: [f1, f2, f3],
-    project8: [to, to1],
-    project9: [t1, t10, t2, t3, t4, t5, t6, t7, t8, t9],
-    project10: [VelvetSkins2, VelvetSkins3, VelvetSkins4, VelvetSkins5, VelvetSkins6, VelvetSkins7, VelvetSkins8, VelvetSkins9, VelvetSkins10, VelvetSkins11, VelvetSkins12, VelvetSkins13, VelvetSkins14, VelvetSkins15, VelvetSkins16],
-    project11: [houseMaroneia, houseMaroneia2, houseMaroneia3, houseMaroneia4, houseMaroneia5],
-    project12: [threeStorybuilding, threeStorybuilding2, threeStorybuilding3, threeStorybuilding4],
-    project13: [roofdetachedhouse, roofdetachedhouse2, roofdetachedhouse3, roofdetachedhouse4, roofdetachedhouse5, roofdetachedhouse6],
-    project14: [groundFloorHolidayHomes, groundFloorHolidayHomes2, groundFloorHolidayHomes3, groundFloorHolidayHomes4, groundFloorHolidayHomes5, groundFloorHolidayHomes6, groundFloorHolidayHomes7],
-    project15: [
-      houseAtArogiRodopi, houseAtArogiRodopi2, houseAtArogiRodopi3, 
-      houseAtArogiRodopi4, houseAtArogiRodopi5, houseAtArogiRodopi6,
-      houseAtArogiRodopi7, houseAtArogiRodopi8, houseAtArogiRodopi9,
-      houseAtArogiRodopi10
-    ],
-    project16: [
-      SmallRentalApartments1,
-      SmallRentalApartments2,
-      SmallRentalApartments3,
-      SmallRentalApartments4,
-      SmallRentalApartments5,
-      SmallRentalApartments6
-    ],
-    project17: [
-      MaroniaPlatanitis1,
-      MaroniaPlatanitis2,
-      MaroniaPlatanitis3,
-      MaroniaPlatanitis4,
-      MaroniaPlatanitis5
-    ],
-    project18: [
-      structureRepairEval1,
-      structureRepairEval2,
-      structureRepairEval3,
-      structureRepairEval4,
-      structureRepairEval5,
-      structureRepairEval6,
-      structureRepairEval7
-    ],
-    project19: [
-      photorealismHouse1,
-      photorealismHouse2,
-      photorealismHouse3,
-      photorealismHouse4,
-      photorealismHouse5,
-      photorealismHouse6,
-      photorealismHouse7
-    ],
-    project20: [constructionResidential],
-    project21: [
-      singleStoreyHouse1,
-      singleStoreyHouse2,
-      singleStoreyHouse3,
-      singleStoreyHouse4
-    ],
-    project22: [penetronAdmix],
-    project23: [
-      constructionDetachedHouse1,
-      constructionDetachedHouse2,
-      constructionDetachedHouse3,
-      constructionDetachedHouse4,
-      constructionDetachedHouse5,
-      constructionDetachedHouse6,
-      constructionDetachedHouse7,
-      constructionDetachedHouse8
-    ],
-    project24: [
-      constructionHouseKomotini1,
-      constructionHouseKomotini2,
-      constructionHouseKomotini3,
-      constructionHouseKomotini4
-    ],
-    project25: [
-      summerResidenceComplex1,
-      summerResidenceComplex2,
-      summerResidenceComplex3,
-      summerResidenceComplex4,
-      summerResidenceComplex5,
-      summerResidenceComplex6
-    ],
-    project26: [heightIncreaseKomotini],
-    project27: [
-      constructionOfDetachedHouse1,
-      constructionOfDetachedHouse2,
-      constructionOfDetachedHouse3
-    ],
-    project28: [
-      constructionOfPrivateProjects1,
-      constructionOfPrivateProjects2,
-      constructionOfPrivateProjects3,
-      constructionOfPrivateProjects4
-    ],
-    project29: [
-      mikelIkea1,
-      mikelIkea2,
-      mikelIkea3,
-      mikelIkea4
-    ],
-    project30: [holidayGroundFloorResidences],
-    project31: [
-      damagesCausesRestorations1,
-      damagesCausesRestorations2,
-      damagesCausesRestorations3,
-      damagesCausesRestorations4,
-      damagesCausesRestorations5,
-      damagesCausesRestorations6,
-      damagesCausesRestorations7
-    ],
-    project32: [constructionInProgress],
-    project33: [
-      cornerPlotUrbanHouse1,
-      cornerPlotUrbanHouse2
-    ],
-    project34: [
-      newBusinessSpace1,
-      newBusinessSpace2,
-      newBusinessSpace3
-    ],
-    project35: [constructionProgress],
-    project36: [
-      insideConstruction1,
-      insideConstruction2
-    ]
+    project1: {
+      images: [RenovationDetachedHouseCenter1, RenovationDetachedHouseCenter2, RenovationDetachedHouseCenter3],
+      title: {
+        el: 'Aνάπλαση μονοκατοικίας στο κέντρο',
+        en: 'Renovation of detached house in the center'
+      },
+      description: {
+        el: 'Ανακαίνιση και αναδιαμόρφωση μονοκατοικίας στο κέντρο',
+        en: 'Renovation and remodeling of detached house in the center'
+      }
+    },
+    project2: {
+      images: [StoreShoppingCenter1, StoreShoppingCenter2, StoreShoppingCenter3, StoreShoppingCenter4, StoreShoppingCenter5, StoreShoppingCenter6, StoreShoppingCenter7, StoreShoppingCenter8, StoreShoppingCenter9],
+      title: {
+        el: 'Κατάστημα σε Εμπορικό κέντρο',
+        en: 'Store in Shopping Center'
+      },
+      description: {
+        el: 'Σχεδιασμός και κατασκευή καταστήματος σε εμπορικό κέντρο',
+        en: 'Design and construction of store in shopping center'
+      }
+    },
+    project3: {
+      images: [RenovationSecondDetachedHouseCenter1, RenovationSecondDetachedHouseCenter2, RenovationSecondDetachedHouseCenter3, RenovationSecondDetachedHouseCenter4, RenovationSecondDetachedHouseCenter5],
+      title: {
+        el: 'Aνάπλαση μονοκατοικίας στο κέντρο',
+        en: 'Renovation of detached house in the center'
+      },
+      description: {
+        el: 'Ανακαίνιση και αναδιαμόρφωση μονοκατοικίας στο κέντρο',
+        en: 'Renovation and remodeling of detached house in the center'
+      }
+    },
+    project4: {
+      images: [plataniti, plataniti2],
+      title: {
+        el: 'Παραλια Πλατανιτη Μαρώνειας, Συγκροτημα εξι θερινων κατοικιων',
+        en: 'Maronia Platanitis Beach, Complex of six summer houses'
+      },
+      description: {
+        el: 'You wish to invest on new property or land at Maronia or Fanari? Maronia Platanitis beach summer retreat development-six small summer houses . Maronia seafront, Platanitis beach Rodopi (Komotini) prefecture. Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Κομοτηνή, Μαρωνεια , Φανάρι',
+        en: 'You wish to invest on new property or land at Maronia or Fanari? Maronia Platanitis beach summer retreat development-six small summer houses . Maronia seafront, Platanitis beach Rodopi (Komotini) prefecture. Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Komotini, Maronia , Fanari'
+      }
+    },
+    project5: {
+      images: [plataniti3, plataniti4],
+      title: {
+        el: 'Επιθυμείτε να επενδύσετε στην παραλιακή ζώνη της Μαρώνειας; ή του Φαναρίου',
+        en: 'Would you like to invest in the coastal zone of Maronia or Fanari?'
+      },
+      description: {
+        el: 'Παραλια Πλατανιτη Μαρωνειας, Συγκροτημα εξι θερινων κατοικιων. Maronia Platanitis beach summer retreat development-six small summer houses . Maronia seafront, Platanitis beach Rodopi (Komotini) prefecture. Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Κομοτηνή, Μαρωνεια , Φανάρι',
+        en: 'Maronia Platanitis Beach, Complex of six summer houses. Maronia Platanitis beach summer retreat development-six small summer houses . Maronia seafront, Platanitis beach Rodopi (Komotini) prefecture. Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Komotini, Maronia , Fanari'
+      }
+    },
+    project6: {
+      images: [
+        MaroniaRentalApartmentsResort,
+        MaroniaRentalApartmentsResort2,
+        MaroniaRentalApartmentsResort3,
+        MaroniaRentalApartmentsResort4,
+        MaroniaRentalApartmentsResort5
+      ],
+      title: {
+        el: 'Μαρώνεια Ενοικιαζόμενα διαμερίσματα Resort. Παραθαλάσσια Μαρώνεια, Αλκυώνα, νομός Ροδόπης (Κομοτηνή)',
+        en: 'Maronia Rental Apartments Resort. Seaside Maronia, Alkyona, Rodopi Prefecture (Komotini)'
+      },
+      description: {
+        el: 'Νομός Ροδόπης (Κομοτηνής). Αρχιτεκτονική , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Κομοτηνή, Μαρώνεια , Φανάρι',
+        en: 'Rodopi Prefecture (Komotini). Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Komotini, Maronia , Fanari'
+      }
+    },
+    project7: {
+      images: [f1, f2, f3],
+      title: {
+        el: 'Μονοκατοικία στην Παραλία Αρωγής',
+        en: 'House in Arogi Beach'
+      },
+      description: {
+        el: 'Αρχιτεκτονική μελέτη, Στατική μελέτη, ισόγειας μονοκατοικίας 50 τ.μ. με σοφίτα 25 τ.μ.',
+        en: 'Architectural study, Static study, ground floor house 50 sq.m. with 25 sq.m. loft'
+      }
+    },
+    project8: {
+      images: [to, to1],
+      title: {
+        el: 'Διώροφη Μονοκατοικία με Σοφίτα στην Εκτενεπόλ',
+        en: 'Two-story House with Loft in Ektenepol'
+      },
+      description: {
+        el: 'Ανέγερση διώροφου μονοκατοικίας με Σοφίτα- αρχιτεκτονική μελέτη',
+        en: 'Construction of two-story house with loft - architectural study'
+      }
+    },
+    project9: {
+      images: [t1, t10, t2, t3, t4, t5, t6, t7, t8, t9],
+      title: {
+        el: 'Πολυώροφα Κτίρια Κατοικιών στην Κομοτηνή',
+        en: 'Multi-storey Residential Buildings in Komotini'
+      },
+      description: {
+        el: 'Past multi storey residential projects. Komotini.',
+        en: 'Past multi storey residential projects. Komotini.'
+      }
+    },
+    project10: {
+      images: [VelvetSkins2, VelvetSkins3, VelvetSkins4, VelvetSkins5, VelvetSkins6, VelvetSkins7, VelvetSkins8, VelvetSkins9, VelvetSkins10, VelvetSkins11, VelvetSkins12, VelvetSkins13, VelvetSkins14, VelvetSkins15, VelvetSkins16],
+      title: {
+        el: 'Velvet Skins Laser and Face Center Κομοτηνή',
+        en: 'Velvet Skins Laser and Face Center Komotini'
+      },
+      description: {
+        el: 'Αρχιτεκτονικός σχεδιασμός, Μελέτη, Πλήρης οργάνωση χρονοδιαγράμματος & Λειτουργική υλοποίηση',
+        en: 'Architectural design, Study, Complete schedule organization & Functional implementation'
+      }
+    },
+    project11: {
+      images: [houseMaroneia, houseMaroneia2, houseMaroneia3, houseMaroneia4, houseMaroneia5],
+      title: {
+        el: 'Κατοικία στη Μαρώνεια',
+        en: 'House in Maronia'
+      },
+      description: {
+        el: 'Μελέτη και κατασκευή κατοικίας στη Μαρώνεια',
+        en: 'Study and construction of house in Maronia'
+      }
+    },
+    project12: {
+      images: [threeStorybuilding, threeStorybuilding2, threeStorybuilding3, threeStorybuilding4],
+      title: {
+        el: 'Τριώροφο Κτίριο',
+        en: 'Three-story Building'
+      },
+      description: {
+        el: 'Κατασκευή τριώροφου κτιρίου',
+        en: 'Construction of three-story building'
+      }
+    },
+    project13: {
+      images: [roofdetachedhouse, roofdetachedhouse2, roofdetachedhouse3, roofdetachedhouse4, roofdetachedhouse5, roofdetachedhouse6],
+      title: {
+        el: 'Μονοκατοικία με Στέγη',
+        en: 'House with Roof'
+      },
+      description: {
+        el: 'Κατασκευή μονοκατοικίας με στέγη',
+        en: 'Construction of house with roof'
+      }
+    },
+    project14: {
+      images: [groundFloorHolidayHomes, groundFloorHolidayHomes2, groundFloorHolidayHomes3, groundFloorHolidayHomes4, groundFloorHolidayHomes5, groundFloorHolidayHomes6, groundFloorHolidayHomes7],
+      title: {
+        el: 'Ισόγειες Παραθεριστικές Κατοικίες',
+        en: 'Ground Floor Holiday Homes'
+      },
+      description: {
+        el: 'Κατασκευή ισόγειων παραθεριστικών κατοικιών',
+        en: 'Construction of ground floor holiday homes'
+      }
+    },
+    project15: {
+      images: [houseAtArogiRodopi, houseAtArogiRodopi2, houseAtArogiRodopi3, houseAtArogiRodopi4, houseAtArogiRodopi5, houseAtArogiRodopi6, houseAtArogiRodopi7, houseAtArogiRodopi8, houseAtArogiRodopi9, houseAtArogiRodopi10],
+      title: {
+        el: 'Κατοικία στην Αρωγή Ροδόπης',
+        en: 'House in Arogi, Rodopi'
+      },
+      description: {
+        el: 'Κατασκευή κατοικίας στην Αρωγή Ροδόπης',
+        en: 'Construction of house in Arogi, Rodopi'
+      }
+    },
+    project16: {
+      images: [SmallRentalApartments1, SmallRentalApartments2, SmallRentalApartments3, SmallRentalApartments4, SmallRentalApartments5, SmallRentalApartments6],
+      title: {
+        el: 'Maronia Rental apartments Resort',
+        en: 'Maronia Rental Apartments Resort'
+      },
+      description: {
+        el: 'Συγκρότημα ενοικιαζόμενων διαμερισμάτων στη Μαρώνεια',
+        en: 'Rental apartments complex in Maronia'
+      }
+    },
+    project17: {
+      images: [MaroniaPlatanitis1, MaroniaPlatanitis2, MaroniaPlatanitis3, MaroniaPlatanitis4, MaroniaPlatanitis5],
+      title: {
+        el: 'Παραλία Πλατανίτη Μαρώνειας',
+        en: 'Platanitis Beach Maronia'
+      },
+      description: {
+        el: 'Συγκρότημα έξι θερινών κατοικιών',
+        en: 'Complex of six summer residences'
+      }
+    },
+    project18: {
+      images: [structureRepairEval1, structureRepairEval2, structureRepairEval3, structureRepairEval4, structureRepairEval5, structureRepairEval6, structureRepairEval7],
+      title: {
+        el: 'Έρευνα Αποτίμησης Επισκευής',
+        en: 'Structure Repair Evaluation Research'
+      },
+      description: {
+        el: 'Μετρήσεις: pH, Χλωριόντων, Βαθμού διάβρωσης, Υγρασίας',
+        en: 'Measurements: pH, Chlorides, Corrosion rate, Humidity'
+      }
+    },
+    project19: {
+      images: [photorealismHouse1, photorealismHouse2, photorealismHouse3, photorealismHouse4, photorealismHouse5, photorealismHouse6, photorealismHouse7],
+      title: {
+        el: 'Φωτορεαλισμός Μονοκατοικίας',
+        en: 'House Photorealism'
+      },
+      description: {
+        el: 'Φωτορεαλιστική απεικόνιση διώροφης μονοκατοικίας',
+        en: 'Photorealistic visualization of two-story house'
+      }
+    },
+    project20: {
+      images: [constructionResidential],
+      title: {
+        el: 'Ανέγερση Οικοδομής Χρήσης Κατοικίας',
+        en: 'Construction of Residential Building'
+      },
+      description: {
+        el: 'Κατασκευή κτιρίου κατοικιών',
+        en: 'Construction of residential building'
+      }
+    },
+    project21: {
+      images: [singleStoreyHouse1, singleStoreyHouse2, singleStoreyHouse3, singleStoreyHouse4],
+      title: {
+        el: 'Ανέγερση Ισόγειας Μονοκατοικίας',
+        en: 'Construction of Single-storey House'
+      },
+      description: {
+        el: 'Κατασκευαστικό στάδιο θερμοπρόσοψης-επιχρισμάτων',
+        en: 'Construction stage of thermal facade-plastering'
+      }
+    },
+    project22: {
+      images: [penetronAdmix],
+      title: {
+        el: 'PenetronAdmix',
+        en: 'PenetronAdmix'
+      },
+      description: {
+        el: 'The step-by-step process',
+        en: 'The step-by-step process'
+      }
+    },
+    project23: {
+      images: [constructionDetachedHouse1, constructionDetachedHouse2, constructionDetachedHouse3, constructionDetachedHouse4, constructionDetachedHouse5, constructionDetachedHouse6, constructionDetachedHouse7, constructionDetachedHouse8],
+      title: {
+        el: 'Construction of a detached house',
+        en: 'Construction of a detached house'
+      },
+      description: {
+        el: 'Εξέλιξη κατασκευής- επιχρίσματα, εργασίες αποπεράτωσης',
+        en: 'Construction progress - plastering, completion works'
+      }
+    },
+    project24: {
+      images: [constructionHouseKomotini1, constructionHouseKomotini2, constructionHouseKomotini3, constructionHouseKomotini4],
+      title: {
+        el: 'Ανέγερση Μονοκατοικίας στην Κομοτηνή',
+        en: 'Construction of House in Komotini'
+      },
+      description: {
+        el: 'Εξέλιξη κατασκευής- αποπεράτωση πλακών σκυροδέματος',
+        en: 'Construction progress - completion of concrete slabs'
+      }
+    },
+    project25: {
+      images: [summerResidenceComplex1, summerResidenceComplex2, summerResidenceComplex3, summerResidenceComplex4, summerResidenceComplex5, summerResidenceComplex6],
+      title: {
+        el: 'Συγκρότημα Θερινών Κατοικιών Πλατανίτης',
+        en: 'Summer Residence Complex Platanitis'
+      },
+      description: {
+        el: 'Επένδυση στην παραλιακή ζώνη της Μαρώνειας',
+        en: 'Investment in the coastal zone of Maronia'
+      }
+    },
+    project26: {
+      images: [heightIncreaseKomotini],
+      title: {
+        el: 'Προσθήκη καθ\' ύψος στην Κομοτηνή',
+        en: 'Height Addition in Komotini'
+      },
+      description: {
+        el: 'Προετοιμασία εργασιών: Υδροβολή, Απόξεση, κλπ',
+        en: 'Work preparation: Hydroblasting, Scraping, etc'
+      }
+    },
+    project27: {
+      images: [constructionOfDetachedHouse1, constructionOfDetachedHouse2, constructionOfDetachedHouse3],
+      title: {
+        el: 'Ανέγερση Μονοκατοικίας στην Κομοτηνή',
+        en: 'Construction of House in Komotini'
+      },
+      description: {
+        el: 'Εξέλιξη κατασκευής- επιχρίσματα',
+        en: 'Construction progress - plastering'
+      }
+    },
+    project28: {
+      images: [constructionOfPrivateProjects1, constructionOfPrivateProjects2, constructionOfPrivateProjects3, constructionOfPrivateProjects4],
+      title: {
+        el: 'Κατασκευή Ιδιωτικών Έργων',
+        en: 'Construction of Private Projects'
+      },
+      description: {
+        el: 'Ανακαινίσεις, Μονώσεις ταρατσών - εξωστών - υπογείων',
+        en: 'Renovations, Insulation of terraces - balconies - basements'
+      }
+    },
+    project29: {
+      images: [mikelIkea1, mikelIkea2, mikelIkea3, mikelIkea4],
+      title: {
+        el: 'Mikel-IKEA Project',
+        en: 'Mikel-IKEA Project'
+      },
+      description: {
+        el: 'Επαγγελματικός χώρος',
+        en: 'Professional space'
+      }
+    },
+    project30: {
+      images: [holidayGroundFloorResidences],
+      title: {
+        el: 'Παραθεριστικές Ισόγειες Κατοικίες',
+        en: 'Holiday Ground Floor Residences'
+      },
+      description: {
+        el: 'Τρεις όμοιες παραθεριστικές κατοικίες στον Προφήτη Ηλία',
+        en: 'Three identical holiday homes in Profitis Ilias'
+      }
+    },
+    project31: {
+      images: [damagesCausesRestorations1, damagesCausesRestorations2, damagesCausesRestorations3, damagesCausesRestorations4, damagesCausesRestorations5, damagesCausesRestorations6, damagesCausesRestorations7],
+      title: {
+        el: 'Έρευνα Βλαβών και Αποκαταστάσεων',
+        en: 'Damage Research and Restorations'
+      },
+      description: {
+        el: 'Μετρήσεις υγρασίας, Υλοποιήσεις αρχιτεκτονικών μελετών',
+        en: 'Moisture measurements, Implementation of architectural studies'
+      }
+    },
+    project32: {
+      images: [constructionInProgress],
+      title: {
+        el: 'Construction in Progress',
+        en: 'Construction in Progress'
+      },
+      description: {
+        el: 'Ongoing construction project',
+        en: 'Ongoing construction project'
+      }
+    },
+    project33: {
+      images: [cornerPlotUrbanHouse1, cornerPlotUrbanHouse2],
+      title: {
+        el: 'Γωνιακό Οικόπεδο Αστικής Μονοκατοικίας',
+        en: 'Corner Plot Urban House'
+      },
+      description: {
+        el: 'Περιοχή Εκτενεπόλ - Excavation days',
+        en: 'Ektenepol area - Excavation days'
+      }
+    },
+    project34: {
+      images: [newBusinessSpace1, newBusinessSpace2, newBusinessSpace3],
+      title: {
+        el: 'Νέος Επαγγελματικός Χώρος',
+        en: 'New Business Space'
+      },
+      description: {
+        el: 'Αρχιτεκτονικός σχεδιασμός και υλοποίηση',
+        en: 'Architectural design and implementation'
+      }
+    },
+    project35: {
+      images: [constructionProgress],
+      title: {
+        el: 'Κατασκευή σε Εξέλιξη',
+        en: 'Construction in Progress'
+      },
+      description: {
+        el: 'Construction in progress',
+        en: 'Construction in progress'
+      }
+    },
+    project36: {
+      images: [insideConstruction1, insideConstruction2],
+      title: {
+        el: 'In Progress, Κομοτηνή',
+        en: 'In Progress, Komotini'
+      },
+      description: {
+        el: 'Εσωτερικές εργασίες',
+        en: 'Interior works'
+      }
+    },
+    project37: {
+      images: [pastMultiStoreyProjects1, pastMultiStoreyProjects2, pastMultiStoreyProjects3, pastMultiStoreyProjects4, pastMultiStoreyProjects5, pastMultiStoreyProjects6, pastMultiStoreyProjects7, pastMultiStoreyProjects8, pastMultiStoreyProjects9],
+      title: {
+        el: 'Πολυώροφα Έργα Κατοικιών',
+        en: 'Multi-storey Residential Projects'
+      },
+      description: {
+        el: 'Παλαιότερα έργα στην Κομοτηνή',
+        en: 'Past projects in Komotini'
+      }
+    },
+    project38: {
+      images: [constructionSiteManagement1, constructionSiteManagement2, constructionSiteManagement3, constructionSiteManagement4, constructionSiteManagement5, constructionSiteManagement6, constructionSiteManagement7, constructionSiteManagement8, constructionSiteManagement9],
+      title: {
+        el: 'Διαχείριση Εργοταξίου',
+        en: 'Construction Site Management'
+      },
+      description: {
+        el: 'Ολοκληρωμένες υπηρεσίες συμβούλων μηχανικών',
+        en: 'Comprehensive engineering consulting services'
+      }
+    },
+    project39: {
+      images: [olderProjects1, olderProjects2, olderProjects3, olderProjects4],
+      title: {
+        el: 'Παλαιότερα Projects',
+        en: 'Older Projects'
+      },
+      description: {
+        el: 'Αρχιτεκτονικές, Στατικές & Ενεργειακές Μελέτες',
+        en: 'Architectural, Static & Energy Studies'
+      }
+    }
   };
 
   const projectTitles = {
@@ -458,7 +789,7 @@ const Home = () => {
       "Study of Ground Floor House Construction",
       "Prefabricated Houses in Prophet Elias",
       "House in Arogi Beach",
-      "Two-story House with Attic in Ektenepol",
+      "Two-story House with Loft in Ektenepol",
       "Multi-storey Residential Buildings in Komotini",
       "Velvet Skins Laser and Face Center Komotini",
       "House in Maronia",
@@ -578,19 +909,19 @@ const Home = () => {
     ]
   };
 
-  const handlePrevSlide = (project: ProjectKey, e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handlePrevSlide = (projectKey: string, e: React.MouseEvent) => {
+    e.stopPropagation(); // Σταματάει το event από το να φτάσει στο parent (card click)
     setCurrentSlides(prev => ({
       ...prev,
-      [project]: prev[project] === 0 ? projectImages[project].length - 1 : prev[project] - 1
+      [projectKey]: prev[projectKey] > 0 ? prev[projectKey] - 1 : projectImages[projectKey as ProjectKey].images.length - 1
     }));
   };
 
-  const handleNextSlide = (project: ProjectKey, e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleNextSlide = (projectKey: string, e: React.MouseEvent) => {
+    e.stopPropagation(); // Σταματάει το event από το να φτάσει στο parent (card click)
     setCurrentSlides(prev => ({
       ...prev,
-      [project]: prev[project] === projectImages[project].length - 1 ? 0 : prev[project] + 1
+      [projectKey]: prev[projectKey] < projectImages[projectKey as ProjectKey].images.length - 1 ? prev[projectKey] + 1 : 0
     }));
   };
 
@@ -877,97 +1208,133 @@ const Home = () => {
     setSelectedProject(projectNumber);
   };
 
+  // Ρυθμίσεις για το slider
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <ChevronRight className="text-white" />,
+    prevArrow: <ChevronLeft className="text-white" />
+  };
+
+  // Συνάρτηση για άνοιγμα του modal
+  const openImageModal = (images: string[]) => {
+    setSelectedImages(images);
+    setIsModalOpen(true);
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section - ΝΕΟ */}
-      <div className="relative bg-cover bg-center py-16 md:py-24"
-        style={{ 
-          backgroundImage: `url(${homeSectionBackground})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover'
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              {language === 'el' ? 'Ολοκληρωμένες υπηρεσίες συμβούλων μηχανικών' : 'Comprehensive Engineering Consulting Services'}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-200 italic">
-              {language === 'el' 
-                ? <span>Διπλ. Πολιτικός Μηχανικός (ισοτιμία Ε.Μ.Π.) • Αρχιτέκτων Μηχανικός Α.Π.Θ.</span>
-                : <span>Civil Engineer (NTUA eq.) • Architect Engineer AUTH</span>
-              }
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Construction Management Card */}
+      {/* Hero Section */}
+      <div className="relative h-screen">
+        <div className="absolute inset-0">
+          <img
+            src={homeSectionBackground}
+            alt="Hero"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        {/* Changed from 'items-center' to 'items-start pt-32' */}
+        <div className="relative h-full flex items-start pt-32">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/95 backdrop-blur-sm rounded-lg p-6 hover:shadow-lg transition-shadow h-[300px] overflow-y-auto custom-scrollbar w-full max-w-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
             >
-              <div className="flex items-center mb-4">
-                <div className="bg-blue-100 p-3 rounded-full">
-                  <Building2 className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold ml-4 text-gray-800">
-                  {language === 'el' ? 'Διαχείριση Εργοταξίου & Έργων' : 'Construction & Project Management'}
-                </h3>
-              </div>
-              <ul className="space-y-3">
-                {constructionServices.map((service, index) => (
-                  <motion.li 
-                    key={index}
-                    className="flex items-start space-x-3 text-gray-700"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
-                    <span>{service[language]}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+              {/* Professional Title */}
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-gray-300 text-lg md:text-xl mb-4"
+              >
+                {language === 'el' 
+                  ? (
+                    <>
+                      <span className="block mb-2">Γιάννης Μαυρίδης <span className="mx-24"></span> Νίκη Μαυρίδου</span>
+                      Διπλ. Πολιτικός Μηχανικός (ισοτιμία Ε.Μ.Π.) • Αρχιτέκτων Μηχανικός Α.Π.Θ.
+                    </>
+                  )
+                  : (
+                    <>
+                      <span className="block mb-2">Giannis Mavridis <span className="mx-16"></span> Niki Mavridou</span>
+                      Civil Engineer (NTUA eq.) • Architect Engineer AUTH
+                    </>
+                  )}
+              </motion.p>
 
-            {/* Architectural Design Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/95 backdrop-blur-sm rounded-lg p-6 hover:shadow-lg transition-shadow h-[300px] overflow-y-auto custom-scrollbar w-full max-w-xl"
-            >
-              <div className="flex items-center mb-2">
-                <div className="bg-green-100 p-3 rounded-full">
-                  <Ruler className="h-6 w-6 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold ml-4 text-gray-800">
-                  {language === 'el' ? 'Αρχιτεκτονικός Σχεδιασμός & Άδειες' : 'Architectural Design & Permits'}
-                </h3>
+              <motion.h1
+                className="text-4xl md:text-6xl font-bold text-white mb-16"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+              >
+                {language === 'el'
+                  ? 'Ολοκληρωμένες υπηρεσίες συμβούλων μηχανικών'
+                  : 'Comprehensive engineering consulting services'}
+              </motion.h1>
+
+              {/* Rest of the content */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 mt-8">  {/* Changed from gap-12 to gap-24 */}
+                {/* Construction Management Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white/95 backdrop-blur-sm rounded-lg p-6 hover:shadow-lg transition-shadow h-[300px] overflow-y-auto custom-scrollbar w-full max-w-xl"
+                >
+                  <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+                    {language === 'el' ? 'Διαχείριση Εργοταξίου & Έργων' : 'Construction & Project Management'}
+                  </h3>
+                  <ul className="space-y-3">
+                    {constructionServices.map((service, index) => (
+                      <motion.li 
+                        key={index}
+                        className="flex items-start gap-3 text-gray-700"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
+                        <span className="flex-1">{service[language]}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* Architectural Services Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white/95 backdrop-blur-sm rounded-lg p-6 hover:shadow-lg transition-shadow h-[300px] overflow-y-auto custom-scrollbar w-full max-w-xl"
+                >
+                  <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+                    {language === 'el' ? 'Αρχιτεκτονικός Σχεδιασμός & Άδειες' : 'Architectural Design & Permits'}
+                  </h3>
+                  <ul className="space-y-3">
+                    {architecturalServices.map((service, index) => (
+                      <motion.li 
+                        key={index}
+                        className="flex items-start gap-3 text-gray-700"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
+                        <span className="flex-1">{service[language]}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
               </div>
-              <ul className="space-y-3">
-                {architecturalServices.map((service, index) => (
-                  <motion.li 
-                    key={index}
-                    className="flex items-start space-x-3 text-gray-700"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
-                    <span>{service[language]}</span>
-                  </motion.li>
-                ))}
-              </ul>
             </motion.div>
           </div>
         </div>
@@ -985,27 +1352,55 @@ const Home = () => {
             {language === 'el' ? 'Επιλεγμένα Έργα' : 'Featured Projects'}
           </motion.h2>
 
+          {/* Project Navigation Buttons */}
+          <div className="flex flex-col md:flex-row justify-center gap-4 mb-12">
+            <Link
+              to="/coastalzoneprojects"  // Βεβαιωθείτε ότι αυτό το path ταιριάζει με το Route
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <Waves className="w-5 h-5" />
+              <span>
+                {language === 'el' 
+                  ? 'Έργα Ανάπλασης Παραλιακών ζωνών' 
+                  : 'Coastal Zone Regeneration Projects'}
+              </span>
+            </Link>
+
+            <Link
+              to="/commercial-projects"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+            >
+              <Store className="w-5 h-5" />
+              <span>
+                {language === 'el' 
+                  ? 'Έργα Εμπορικών Επιχειρήσεων' 
+                  : 'Commercial Business Projects'}
+              </span>
+            </Link>
+          </div>
+
+          {/* Existing Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Δημιουργία των project cards μόνο για τα υπάρχοντα projects */}
-            {Object.keys(projectImages).map((projectKey, index) => {
-              const key = projectKey as ProjectKey;
-              return (
-                <motion.div
-                  key={index}
-                  className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  onClick={() => handleSelectedProject(index)}
-                >
-                  <div className="relative aspect-[4/3]">
-                    <img 
-                      src={projectImages[key][currentSlides[key] || 0]} 
-                      alt={projectTitles[language][index]} 
-                      className="w-full h-full object-cover"
-                    />
-                    {projectImages[key].length > 1 && (
-                      <div className="absolute inset-0 flex items-center justify-between px-4">
+            {Object.entries(projectImages).map(([key, project], index) => (
+              <motion.div
+                key={key}
+                className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                onClick={() => openImageModal(project.images)}
+              >
+                <div className="relative h-64 group">
+                  <img
+                    src={project.images[currentSlides[key] || 0]}
+                    alt={project.title[language]}
+                    className="w-full h-full object-cover"
+                  />
+                  {project.images.length > 1 && (
+                    <>
+                      {/* Navigation Arrows */}
+                      <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity">
                         <button 
                           className="p-2 bg-black/50 text-white rounded-full hover:bg-black/70 transition-colors"
                           onClick={(e) => handlePrevSlide(key, e)}
@@ -1019,22 +1414,63 @@ const Home = () => {
                           <ChevronRight className="h-6 w-6" />
                         </button>
                       </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">
-                      {projectTitles[language][index]}
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      {projectDescriptions[language][index]}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
+                      {/* Image Counter */}
+                      <div className="absolute bottom-2 right-2 bg-black/70 text-white px-2 py-1 rounded text-sm">
+                        {(currentSlides[key] || 0) + 1} / {project.images.length}
+                      </div>
+                    </>
+                  )}
+                </div>
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold mb-2">{project.title[language]}</h3>
+                  <p className="text-gray-600">{project.description[language]}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
+
+      {/* Image Modal - Βελτιωμένο για καλύτερη εμπειρία περιήγησης */}
+      {isModalOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 bg-black bg-opacity-90 flex items-center justify-center"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div 
+            className="relative w-full max-w-6xl mx-4"
+            onClick={e => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-4 right-4 text-white z-10 p-2 hover:text-blue-400 transition-colors"
+              onClick={() => setIsModalOpen(false)}
+            >
+              <X className="h-8 w-8" />
+            </button>
+            
+            <Slider {...sliderSettings}>
+              {selectedImages.map((image, index) => (
+                <div key={index} className="outline-none">
+                  <div className="flex items-center justify-center h-[80vh]">
+                    <img
+                      src={image}
+                      alt={`Slide ${index + 1}`}
+                      className="max-h-full max-w-full object-contain"
+                    />
+                    {/* Προσθήκη ένδειξης τρέχουσας εικόνας */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-3 py-1 rounded">
+                      {index + 1} / {selectedImages.length}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </motion.div>
+      )}
 
       {/* Services Section */}
       <div className="py-12 md:py-16">

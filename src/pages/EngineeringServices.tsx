@@ -126,7 +126,7 @@ const EngineeringServices = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <div className="relative h-full max-w-7xl mx-auto px-4 flex flex-col justify-center">
           <motion.h1 
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-white mb-16"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >

@@ -204,6 +204,15 @@ import Renovation_of_Second_detached_house_in_the_center2 from '../assets/images
 import Renovation_of_Second_detached_house_in_the_center3 from '../assets/images/Renovation_of_Second_detached_house_in_the_center3.jpg';
 import Renovation_of_Second_detached_house_in_the_center4 from '../assets/images/Renovation_of_Second_detached_house_in_the_center4.jpg';
 import Renovation_of_Second_detached_house_in_the_center5 from '../assets/images/Renovation_of_Second_detached_house_in_the_center5.jpg';
+import plataniti from '../assets/images/plataniti.jpg';
+import plataniti2 from '../assets/images/plataniti2.jpg';
+import plataniti3 from '../assets/images/plataniti3.jpg';
+import plataniti4 from '../assets/images/plataniti4.jpg';
+import MaroniaRentalApartmentsResort from '../assets/images/maronia-rental-apartments-resort.jpg';
+import MaroniaRentalApartmentsResort2 from '../assets/images/maronia-rental-apartments-resort2.jpg';
+import MaroniaRentalApartmentsResort3 from '../assets/images/maronia-rental-apartments-resort3.jpg';
+import MaroniaRentalApartmentsResort4 from '../assets/images/maronia-rental-apartments-resort4.jpg';
+import MaroniaRentalApartmentsResort5 from '../assets/images/maronia-rental-apartments-resort5.jpg';
 
 interface ServiceItem {
   title: string;
@@ -353,8 +362,8 @@ const ArchitecturalOffice = () => {
     {
       id: 1,
       title: {
-        el: 'Aνάπλαση μονοκατοικίας στο κέντρο',
-        en: 'Renovation of a detached house in the center'
+        el: 'Μονοκατοικία στην Αρωγή Ροδόπης',
+        en: 'House at Arogi Rodopi'
       },
       description: {
         el: 'Ανάπλαση μονοκατοικίας στο κέντρο της πόλης',
@@ -369,8 +378,26 @@ const ArchitecturalOffice = () => {
     {
       id: 2,
       title: {
+        el: 'Aνάπλαση μονοκατοικίας στο κέντρο',
+        en: 'Renovation of detached house in the center'
+      },
+      description: {
+        el: 'Ανάπλαση δεύτερης μονοκατοικίας στο κέντρο της πόλης',
+        en: 'Renovation of second detached house in the city center'
+      },
+      images: [
+        Renovation_of_Second_detached_house_in_the_center,
+        Renovation_of_Second_detached_house_in_the_center2,
+        Renovation_of_Second_detached_house_in_the_center3,
+        Renovation_of_Second_detached_house_in_the_center4,
+        Renovation_of_Second_detached_house_in_the_center5
+      ]
+    },
+    {
+      id: 3,
+      title: {
         el: 'Κατάστημα σε Εμπορικό κέντρο',
-        en: 'Store in a shopping center'
+        en: 'Store in Shopping center'
       },
       description: {
         el: 'Σχεδιασμός και υλοποίηση καταστήματος σε εμπορικό κέντρο',
@@ -389,22 +416,41 @@ const ArchitecturalOffice = () => {
       ]
     },
     {
-      id: 3,
+      id: 'project-platanitis1',
       title: {
-        el: 'Aνάπλαση μονοκατοικίας στο κέντρο',
-        en: 'Renovation of Second detached house in the center'
+        el: 'Παραλια Πλατανιτη Μαρώνειας, Συγκροτημα εξι θερινων κατοικιων',
+        en: 'Maronia Platanitis Beach, Complex of six summer houses'
       },
       description: {
-        el: 'Ανάπλαση δεύτερης μονοκατοικίας στο κέντρο της πόλης',
-        en: 'Renovation of second detached house in the city center'
+        el: 'You wish to invest on new property or land at Maronia or Fanari? Maronia Platanitis beach summer retreat development-six small summer houses . Maronia seafront, Platanitis beach Rodopi (Komotini) prefecture. Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Κομοτηνή, Μαρωνεια , Φανάρι',
+        en: 'You wish to invest on new property or land at Maronia or Fanari? Maronia Platanitis beach summer retreat development-six small summer houses . Maronia seafront, Platanitis beach Rodopi (Komotini) prefecture. Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Komotini, Maronia , Fanari'
       },
-      images: [
-        Renovation_of_Second_detached_house_in_the_center,
-        Renovation_of_Second_detached_house_in_the_center2,
-        Renovation_of_Second_detached_house_in_the_center3,
-        Renovation_of_Second_detached_house_in_the_center4,
-        Renovation_of_Second_detached_house_in_the_center5
-      ]
+      images: [plataniti, plataniti2]
+    },
+    {
+      id: 'project-platanitis2',
+      title: {
+        el: 'Επιθυμείτε να επενδύσετε στην παραλιακή ζώνη της Μαρώνειας; ή του Φαναρίου',
+        en: 'Would you like to invest in the coastal zone of Maronia or Fanari?'
+      },
+      description: {
+        el: 'Παραλια Πλατανιτη Μαρωνειας, Συγκροτημα εξι θερινων κατοικιων. Maronia Platanitis beach summer retreat development-six small summer houses . Maronia seafront, Platanitis beach Rodopi (Komotini) prefecture. Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Κομοτηνή, Μαρωνεια , Φανάρι',
+        en: 'Maronia Platanitis Beach, Complex of six summer houses. Maronia Platanitis beach summer retreat development-six small summer houses . Maronia seafront, Platanitis beach Rodopi (Komotini) prefecture. Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Komotini, Maronia , Fanari'
+      },
+      images: [plataniti3, plataniti4]
+    },
+    {
+      id: 'project-maronia-resort',
+      title: {
+        el: 'Μαρώνεια Ενοικιαζόμενα διαμερίσματα Resort. Παραθαλάσσια Μαρώνεια, Αλκυώνα, νομός Ροδόπης (Κομοτηνή)',
+        en: 'Maronia Rental Apartments Resort. Seaside Maronia, Alkyona, Rodopi Prefecture (Komotini)'
+      },
+      description: {
+        el: 'Νομός Ροδόπης (Κομοτηνής). Αρχιτεκτονική , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Κομοτηνή, Μαρώνεια , Φανάρι',
+        en: 'Rodopi Prefecture (Komotini). Architecture , @yiannis mavridis Civil Engineering , Real Estate Development , European Certified Evaluations , Business Permits , Komotini, Maronia , Fanari'
+      },
+      images: [MaroniaRentalApartmentsResort, MaroniaRentalApartmentsResort2, MaroniaRentalApartmentsResort3,
+               MaroniaRentalApartmentsResort4, MaroniaRentalApartmentsResort5]
     },
     {
       id: 4,
@@ -442,7 +488,7 @@ const ArchitecturalOffice = () => {
       id: 6,
       title: {
         el: 'Προκατασκευασμένες Κατοικίες στον Προφήτη Ηλία',
-        en: 'Prefabricated Houses in Profitis Ilias'
+        en: 'Prefabricated Houses in Prophet Elias'
       },
       description: {
         el: `Νέο έργο σε εξέλιξη: «Ανέγερση δύο όμοιων προκατασκευασμένων κατοικιών στον παραθεριστικό οικισμό Προφήτη Ηλία Δήμου Μαρώνειας Σαπών, ΠΕ Ροδόπης». Ολοκλήρωση βάσεων σκυροδέματος και εν αναμονή του μεταλλικού σκελετού κατοικιών.
@@ -450,7 +496,7 @@ const ArchitecturalOffice = () => {
 Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
 
 #αρχιτεκτονικοσσχεδιασμος #στατικημελετη #επιβλεψηεργου #κατασκευηεργου`,
-        en: `New project in progress: "Construction of two identical prefabricated houses in the holiday settlement of Profitis Ilias, Municipality of Maroneia Sapon, Rodopi". Completion of concrete foundations and awaiting the metal frame of the houses.`
+        en: `New project in progress: "Construction of two identical prefabricated houses in the holiday settlement of Prophet Elias, Municipality of Maroneia Sapon, Rodopi". Completion of concrete foundations and awaiting the metal frame of the houses.`
       },
       images: [z, x, c, v, b, n, m]
     },
@@ -930,7 +976,8 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
         olderProjects3,
         olderProjects4
       ]
-    }
+    },
+    
   ];
 
   const sliderSettings = {
@@ -1255,11 +1302,7 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
                 variants={itemVariants}
               >
                 <div className="relative h-64">
-                  <Slider
-                    {...sliderSettings}
-                    className="relative"
-                    aria-label="Project images slider"
-                  >
+                  <Slider {...sliderSettings} className="relative" aria-label="Project images slider">
                     {project.images.map((image, imgIndex) => (
                       <div 
                         key={imgIndex} 
@@ -1284,6 +1327,8 @@ Maroneia, Rodopi, Μαρώνεια, Προφήτης Ηλίας Ροδόπης
           </motion.div>
         </div>
       </div>
+
+
 
       {/* Why Choose Us Section */}
       <div className="py-16 bg-white">
