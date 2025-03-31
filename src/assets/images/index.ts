@@ -1,3 +1,41 @@
+// Βασικές εικόνες
+export { default as mikel } from './mikel.jpg';
+export { default as mikel2 } from './mikel2.jpg';
+export { default as mikel3 } from './mikel3.jpg';
+export { default as mikel4 } from './mikel4.png';
+export { default as mikel5 } from './mikel5.png';
+
+// Εικόνες σπιτιών
+export { default as house1 } from './house1.jpg';
+export { default as house2 } from './house2.jpg';
+export { default as house3 } from './house3.jpg';
+export { default as house4 } from './house4.jpg';
+export { default as house5 } from './house5.jpg';
+export { default as house6 } from './house6.jpg';
+export { default as house7 } from './house7.jpg';
+export { default as house8 } from './house8.jpg';
+export { default as house9 } from './house9.jpg';
+export { default as house10 } from './house10.jpg';
+
+// Εικόνες κατασκευών
+export { default as build1 } from './build1.jpg';
+export { default as build2 } from './build2.jpg';
+export { default as build3 } from './build3.jpg';
+export { default as build4 } from './build4.jpg';
+export { default as build5 } from './build5.jpg';
+export { default as build6 } from './build6.jpg';
+
+// Άλλες εικόνες
+export { default as dis1 } from './dis1.jpg';
+export { default as dis2 } from './dis2.jpg';
+export { default as dis3 } from './dis3.jpg';
+export { default as z1 } from './z1.jpg';
+export { default as z2 } from './z2.jpg';
+export { default as z3 } from './z3.jpg';
+export { default as z4 } from './z4.jpg';
+export { default as z5 } from './z5.jpg';
+export { default as z6 } from './z6.jpg';
+
 // Renovation Projects
 export { default as RenovationDetachedHouseCenter1 } from './Renovation_of_a_detached_house_in_the_center.jpg';
 export { default as RenovationDetachedHouseCenter2 } from './Renovation_of_a_detached_house_in_the_center2.jpg';
