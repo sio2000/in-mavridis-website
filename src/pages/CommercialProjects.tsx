@@ -22,12 +22,10 @@ import mikel3 from '../assets/images/mikel3.jpg';
 import mikel4 from '../assets/images/mikel4.png';
 import mikel5 from '../assets/images/mikel5.png';
 import mikeloutside from '../assets/images/mikeloutside.jpg';
-import { 
-  VelvetSkins2New as VelvetSkins2,
-  VelvetSkins3New as VelvetSkins3,
-  VelvetSkins4New as VelvetSkins4,
-  VelvetSkins5New as VelvetSkins5
-} from '../assets/images';
+import VelvetSkins2 from '../assets/images/VelvetSkins2.jpg';
+import VelvetSkins3 from '../assets/images/VelvetSkins3.jpg';
+import VelvetSkins4 from '../assets/images/VelvetSkins4.jpg';
+import VelvetSkins5 from '../assets/images/VelvetSkins5.jpg';
 import VelvetSkins6 from '../assets/images/VelvetSkins6.jpg';
 import VelvetSkins7 from '../assets/images/VelvetSkins7.jpg';
 import VelvetSkins8 from '../assets/images/VelvetSkins8.jpg';
