@@ -147,7 +147,6 @@ export { default as structureRepairEval7 } from './structure_repair_evaluation7.
 export { default as photorealismHouse1 } from './Photorealism_of_house.jpg';
 export { default as photorealismHouse2 } from './Photorealism_of_house2.jpg';
 export { default as photorealismHouse3 } from './Photorealism_of_house3.jpg';
-export { default as heightIncreaseKomotini } from './height_increase_komotini.jpg';
 export { default as constructionProgress } from './construction_progress.jpg';
 export { default as constructionInProgress } from './construction_in_progress.jpg';
 export { default as summerResidenceComplex1 } from './Summer_residence_complex.jpg';
